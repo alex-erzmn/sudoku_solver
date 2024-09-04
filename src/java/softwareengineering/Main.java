@@ -1,7 +1,51 @@
-package java;
+package softwareengineering;
+
+import softwareengineering.Solver.HiddenSingleRule;
+import softwareengineering.Solver.NakedPairRule;
+import softwareengineering.Solver.SingleCandidateRule;
+import softwareengineering.Solver.SudokuSolver;
+import softwareengineering.SudokuFactory.EasySudokuFactory;
+import softwareengineering.SudokuFactory.HardSudokuFactory;
+import softwareengineering.SudokuFactory.MediumSudokuFactory;
+import softwareengineering.SudokuFactory.SudokuFactory;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Ein einfaches Sudoku erstellen
+        SudokuFactory easyFactory = new EasySudokuFactory();
+        int[][] easySudoku = easyFactory.createSudoku();
+        SudokuFactory.printSudoku(easySudoku);
+
+        SudokuSolver solver = new SudokuSolver();
+        solver.addRule(new SingleCandidateRule());
+        solver.addRule(new HiddenSingleRule());
+        solver.addRule(new NakedPairRule());
+
+        if (solver.solve(easySudoku)) {
+            System.out.println("Sudoku gelöst:");
+            SudokuFactory.printSudoku(easySudoku);
+        } else {
+            System.out.println("Konnte das Sudoku nicht vollständig lösen.");
+        }
+
+
+/*
+
+        // Ein mittleres Sudoku erstellen
+        SudokuFactory mediumFactory = new MediumSudokuFactory();
+        int[][] mediumSudoku = mediumFactory.createSudoku();
+        SudokuFactory.printSudoku(mediumSudoku);
+
+        // Ein schwieriges Sudoku erstellen
+        SudokuFactory hardFactory = new HardSudokuFactory();
+        int[][] hardSudoku = hardFactory.createSudoku();
+        SudokuFactory.printSudoku(hardSudoku);
+
+*/
+
+
+        /*
         int[][] sudoku = new int[][] {
                 { 0, 9, 0, 0, 0, 0, 1, 1, 0 },
                 { 8, 0, 4, 0, 2, 0, 3, 0, 7 },
@@ -84,5 +128,6 @@ public class Main {
                 }
             }
         }
+        */
     }
 }

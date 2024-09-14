@@ -1,4 +1,4 @@
-package fr.univcotedazur.softwareengineering.solver;
+package fr.univcotedazur.softwareengineering.deductionrules;
 
 import fr.univcotedazur.softwareengineering.sudokufactory.sudoku.Sudoku;
 
@@ -8,7 +8,7 @@ public class DR1 implements DeductionRule {
 
     @Override
     public boolean run(Sudoku sudoku) {
-        boolean changed = false;
+        boolean wasApplied = false;
 
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
@@ -17,11 +17,11 @@ public class DR1 implements DeductionRule {
                     if (possibleValues.size() == 1) {
                         int value = possibleValues.get(0);
                         sudoku.setCell(row, col, value);
-                        changed = true;
+                        wasApplied = true;
                     }
                 }
             }
         }
-        return changed;
+        return wasApplied;
     }
 }

@@ -1,10 +1,13 @@
 package fr.univcotedazur.softwareengineering.client;
 
+import fr.univcotedazur.softwareengineering.sudokufactory.SudokuType;
 import fr.univcotedazur.softwareengineering.sudokufactory.sudoku.Sudoku;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
 
 public class SudokuGUI extends JFrame implements SudokuObserver {
     private static final int SIZE = 9;
@@ -12,6 +15,7 @@ public class SudokuGUI extends JFrame implements SudokuObserver {
     private SudokuFacade facade;
     private Sudoku sudoku;
     private JLabel ruleLabel;
+    private JComboBox<SudokuType> difficultyComboBox; // Neu hinzugefügt
 
     public SudokuGUI() {
         facade = new SudokuFacade(); // Initialisiere die Facade
@@ -50,15 +54,22 @@ public class SudokuGUI extends JFrame implements SudokuObserver {
         JButton stepButton = new JButton("Next Step");
         JButton solveButton = new JButton("Solve");
 
+        // Schwierigkeitsgrad-Auswahl
+        difficultyComboBox = new JComboBox<>(SudokuType.values());
+        difficultyComboBox.setSelectedItem(SudokuType.RANDOM);
+
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 3;
         controlPanel.add(createSudokuButton, gbc);
 
         gbc.gridy = 1;
-        controlPanel.add(stepButton, gbc);
+        controlPanel.add(difficultyComboBox, gbc); // Schwierigkeitsgrad-Auswahl hinzufügen
 
         gbc.gridy = 2;
+        controlPanel.add(stepButton, gbc);
+
+        gbc.gridy = 3;
         controlPanel.add(solveButton, gbc);
 
         add(controlPanel, BorderLayout.SOUTH);
@@ -73,7 +84,12 @@ public class SudokuGUI extends JFrame implements SudokuObserver {
         createSudokuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sudoku = facade.createSudoku();
+                SudokuType selectedType = (SudokuType) difficultyComboBox.getSelectedItem();
+                try {
+                    sudoku = facade.createSudoku(selectedType);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
                 sudoku.addObserver(SudokuGUI.this);
                 updateSudoku();
                 ruleLabel.setText("Current Rule: None");

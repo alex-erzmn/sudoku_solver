@@ -1,13 +1,16 @@
 package fr.univcotedazur.softwareengineering.client;
 
-import fr.univcotedazur.softwareengineering.solver.DeductionRule;
-import fr.univcotedazur.softwareengineering.solver.DR1;
-import fr.univcotedazur.softwareengineering.solver.SudokuSolver;
+import fr.univcotedazur.softwareengineering.deductionrules.DeductionRule;
+import fr.univcotedazur.softwareengineering.deductionrules.DR1;
 import fr.univcotedazur.softwareengineering.sudokufactory.SudokuFactory;
+import fr.univcotedazur.softwareengineering.sudokufactory.SudokuType;
 import fr.univcotedazur.softwareengineering.sudokufactory.sudoku.Sudoku;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import static fr.univcotedazur.softwareengineering.sudokufactory.SudokuType.RANDOM;
 
 /**
  * Facade for the Sudoku application.
@@ -19,22 +22,19 @@ import java.util.Map;
  */
 public class SudokuFacade {
     private SudokuFactory sudokuFactory;
-    private SudokuSolver sudokuSolver;
     private Map<String, DeductionRule> rulesMap;
     private String currentRuleName;
 
     public SudokuFacade() {
         sudokuFactory = new SudokuFactory();
-        sudokuSolver = new SudokuSolver();
         rulesMap = new HashMap<>();
         DeductionRule dr1 = new DR1();
         rulesMap.put("Naked Single", dr1);
-        sudokuSolver.addRule(dr1);
         currentRuleName = "None";
     }
 
-    public Sudoku createSudoku() {
-        return sudokuFactory.createSudoku();
+    public Sudoku createSudoku(SudokuType type) throws IOException {
+        return sudokuFactory.createSudoku(type);
     }
 
     public String step(Sudoku sudoku) {

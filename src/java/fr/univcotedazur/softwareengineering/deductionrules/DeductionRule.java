@@ -1,4 +1,4 @@
-package fr.univcotedazur.softwareengineering.solver;
+package fr.univcotedazur.softwareengineering.deductionrules;
 
 import fr.univcotedazur.softwareengineering.sudokufactory.sudoku.Sudoku;
 

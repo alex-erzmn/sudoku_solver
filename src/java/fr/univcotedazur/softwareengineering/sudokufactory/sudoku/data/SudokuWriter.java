@@ -66,10 +66,10 @@ public class SudokuWriter {
     // Hauptprogramm
     public static void main(String[] args) {
         // Name der Eingabedatei, die die Puzzle- und Lösungspaare enthält
-        String inputFileName = "sudoku_input.txt";
+        String inputFileName = "src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_hard.txt";
 
         // Name der Ausgabedateien für Puzzle und Lösung
-        String puzzleFileName = "sudoku_puzzle_output.txt";
+        String puzzleFileName = "easySudokus.txt";
         String solutionFileName = "sudoku_solution_output.txt";
 
         // Puzzle- und Lösungspaare aus der Datei einlesen

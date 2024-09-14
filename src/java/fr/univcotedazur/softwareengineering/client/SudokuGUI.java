@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class SudokuGUI extends JFrame implements SudokuObserver {
     private static final int SIZE = 9;
@@ -73,7 +74,11 @@ public class SudokuGUI extends JFrame implements SudokuObserver {
         createSudokuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sudoku = facade.createSudoku();
+                try {
+                    sudoku = facade.createSudoku();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
                 sudoku.addObserver(SudokuGUI.this);
                 updateSudoku();
                 ruleLabel.setText("Current Rule: None");

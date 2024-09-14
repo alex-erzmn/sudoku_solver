@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern.">
+      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/easySudokus.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_easy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_hard.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_medium.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleMapFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/Input_easy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_hard.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_medium.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_random.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PROJECT_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sudoku_solver.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$CellButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/DR1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/DeductionRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/SudokuSolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/SudokuFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Cell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Column.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Row.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Sudoku.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/SudokuReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/SudokuWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/sudoku_input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/DR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/DeductionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/SudokuSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/SudokuFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/SudokuFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/sudoku_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_random.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2lbLnPD8wNsF677CTapA8sSwFvg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuWriter.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alles/IdeaProjects/sudoku_solver&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alles\IdeaProjects\sudoku_solver" />
+      <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src" />
+      <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\java\fr\univcotedazur\softwareengineering" />
+      <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\java\fr\univcotedazur\softwareengineering\sudokufactory\sudoku\data" />
+      <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\java\fr\univcotedazur\softwareengineering\sudokuFactory\sudoku\data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="" />
+      <created>1725443996853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725443996853</updated>
+      <workItem from="1725443998187" duration="1627000" />
+      <workItem from="1725455275149" duration="6521000" />
+      <workItem from="1725472429369" duration="292000" />
+      <workItem from="1726057530834" duration="1599000" />
+      <workItem from="1726163997259" duration="17169000" />
+      <workItem from="1726340414574" duration="3758000" />
+      <workItem from="1726345525109" duration="206000" />
+      <workItem from="1726345746461" duration="25000" />
+      <workItem from="1726345788206" duration="88000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit - Setup">
+      <option name="closed" value="true" />
+      <created>1725444173709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725444173709</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit - Remove sonarLint from Git">
+      <option name="closed" value="true" />
+      <created>1725444272635</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725444272635</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First commit - Setup 2">
+      <option name="closed" value="true" />
+      <created>1725445485184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725445485184</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add SudokuFactory and SudokuSolver with DeductionRules">
+      <option name="closed" value="true" />
+      <created>1725459590397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725459590397</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add GUI">
+      <option name="closed" value="true" />
+      <created>1725461044032</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725461044032</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern.">
+      <option name="closed" value="true" />
+      <created>1726183738803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726183738803</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit - Setup" />
+    <MESSAGE value="First commit - Remove sonarLint from Git" />
+    <MESSAGE value="First commit - Setup 2" />
+    <MESSAGE value="Add SudokuFactory and SudokuSolver with DeductionRules" />
+    <MESSAGE value="Add GUI" />
+    <MESSAGE value="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern." />
+  </component>
+</project>

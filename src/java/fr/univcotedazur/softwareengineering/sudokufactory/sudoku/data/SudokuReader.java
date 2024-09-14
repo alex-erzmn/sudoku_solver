@@ -11,8 +11,7 @@ import java.util.Random;
 
 public class SudokuReader {
 
-    // Methode zum Lesen eines zufälligen Sudokus aus einer Datei
-    public static Sudoku readSudokuFromFile(String fileName) {
+    public static Sudoku readSudokuFromFile(String fileName) throws IOException {
         List<Sudoku> sudokus = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -20,31 +19,26 @@ public class SudokuReader {
             int row = 0;
 
             while ((line = reader.readLine()) != null) {
-                // Leere Zeilen überspringen
                 if (line.trim().isEmpty()) continue;
 
-                // Zeile in einzelne Zahlen umwandeln
                 String[] numbers = line.split(",");
-
                 for (int col = 0; col < 9; col++) {
                     int value = Integer.parseInt(numbers[col]);
                     sudoku.setCell(row, col, value);
                 }
 
                 row++;
-
-                // Wenn 9 Zeilen gelesen wurden, das Puzzle zur Liste hinzufügen
                 if (row == 9) {
                     sudokus.add(sudoku);
                     sudoku = new Sudoku();  // Neues Sudoku für das nächste
                     row = 0;
                 }
             }
-        } catch (IOException e) {
-            System.out.println("Fehler beim Lesen der Datei: " + e.getMessage());
+        }
+        if (sudokus.isEmpty()) {
+            throw new IOException("Keine Sudokus in der Datei gefunden.");
         }
 
-        // Zufälliges Sudoku auswählen
         Random random = new Random();
         int randomIndex = random.nextInt(sudokus.size());
 

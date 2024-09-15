@@ -40,7 +40,7 @@ public class SudokuController {
         return sudoku;
     }
 
-    public String step() {
+    public String solve() {
         currentRuleName = "None";
 
         if (sudoku == null) return null;

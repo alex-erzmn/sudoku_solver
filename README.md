@@ -40,3 +40,5 @@ Abstract Class DeductionRule
 - Naked Pair (DR3)
 - Hidden Pair (DR4)
 - Box-Line Reduction (DR5)
+
+<a href="https://www.flaticon.com/free-icons/sudoku" title="sudoku icons">Sudoku icons created by amoghdesign - Flaticon</a>

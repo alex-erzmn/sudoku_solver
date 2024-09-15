@@ -1,12 +1,10 @@
 package fr.univcotedazur.softwareengineering;
 
-import fr.univcotedazur.softwareengineering.client.SudokuController;
-import fr.univcotedazur.softwareengineering.client.SudokuGUI;
+import fr.univcotedazur.softwareengineering.client.SudokuPresenter;
+import javafx.application.Application;
 
 public class Main {
     public static void main(String[] args) {
-        SudokuController controller = new SudokuController();
-        SudokuGUI gui = new SudokuGUI(controller);
-        gui.setVisible(true);
+        Application.launch(SudokuPresenter.class, args);
     }
 }

@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Cell {
     private int value;
-    private final Set<Integer> possibleValues = HashSet.newHashSet(9);
+    private final Set<Integer> possibleValues = new HashSet<>();
 
     public Cell(int value) {
         this.value = value;

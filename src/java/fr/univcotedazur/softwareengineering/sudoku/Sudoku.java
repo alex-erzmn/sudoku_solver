@@ -17,18 +17,19 @@ import java.util.Set;
  * @since 12/09/2024
  */
 public class Sudoku {
+    public static final int SIZE = 9;
     private final Row[] rows;
     private final Column[] columns;
     private final Box[] boxes;
     private final List<SudokuObserver> observers;
 
     public Sudoku() {
-        rows = new Row[9];
-        columns = new Column[9];
-        boxes = new Box[9];
+        rows = new Row[SIZE];
+        columns = new Column[SIZE];
+        boxes = new Box[SIZE];
         observers = new ArrayList<>();
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < SIZE; i++) {
             rows[i] = new Row();
             columns[i] = new Column();
             boxes[i] = new Box();
@@ -36,8 +37,8 @@ public class Sudoku {
     }
 
     public void initializePossibleValues() {
-        for (int row = 0; row < 9; row++) {
-            for (int col = 0; col < 9; col++) {
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
                 List<Integer> possibleValues = calculatePossibleValues(row, col);
                 for (Integer value : possibleValues) {
                     addPossibleValue(row, col, value);
@@ -48,10 +49,10 @@ public class Sudoku {
 
     private List<Integer> calculatePossibleValues(int rowIndex, int colIndex) {
         List<Integer> possibleValues = new ArrayList<>();
-        for (int i = 1; i <= 9; i++) {
+        for (int i = 1; i <= SIZE; i++) {
             possibleValues.add(i);
         }
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < SIZE; i++) {
             possibleValues.remove(Integer.valueOf(getRow(rowIndex).getValue(i)));
             possibleValues.remove(Integer.valueOf(getColumn(colIndex).getValue(i)));
             possibleValues.remove(Integer.valueOf(getBox(getBoxIndex(rowIndex, colIndex)).getValue(i)));
@@ -128,13 +129,13 @@ public class Sudoku {
     }
 
     private void removePossibleValueFromPeers(int row, int col, int value) {
-        for (int c = 0; c < 9; c++) {
+        for (int c = 0; c < SIZE; c++) {
             if (c != col) {
                 removePossibleValue(row, c, value);
             }
         }
 
-        for (int r = 0; r < 9; r++) {
+        for (int r = 0; r < SIZE; r++) {
             if (r != row) {
                 removePossibleValue(r, col, value);
             }
@@ -152,12 +153,23 @@ public class Sudoku {
     }
 
     public int[][] getSudokuGrid() {
-        int[][] sudoku = new int[9][9];
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        int[][] sudoku = new int[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
                 sudoku[i][j] = getValue(i, j);
             }
         }
         return sudoku;
+    }
+
+    public static boolean isSolved(Sudoku sudoku) {
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                if (sudoku.getValue(row, col) == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

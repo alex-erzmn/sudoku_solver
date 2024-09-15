@@ -6,7 +6,7 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 public class SceneManager {
-    private Stage stage;
+    private final Stage stage;
     private Scene startScene;
     private Scene gameScene;
 

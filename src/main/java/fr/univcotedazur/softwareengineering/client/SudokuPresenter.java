@@ -16,10 +16,13 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.SIZE;
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.isSolved;
@@ -28,6 +31,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
 
     private Button[][] cells;
     private SudokuController controller;
+    private MediaPlayer mediaPlayer;
     private Label ruleLabel;
     private ComboBox<SudokuType> difficultyComboBox;
     private ListView<String> ruleList;
@@ -39,6 +43,12 @@ public class SudokuPresenter extends Application implements SudokuObserver {
 
     @Override
     public void start(Stage primaryStage) {
+        String musicFile = getClass().getResource("/audio/please-calm-my-mind.mp3").toExternalForm();
+        Media media = new Media(musicFile);
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Schleife die Musik
+        mediaPlayer.play();
+
         primaryStage.getIcons().add(new Image("/images/sudoku.png"));
         primaryStage.setTitle("Sudoku Solver");
         sceneManager = new SceneManager(primaryStage);
@@ -128,8 +138,28 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         ruleLabel.setTextFill(Color.web("#333333"));
         mainLayout.setTop(ruleLabel);
 
+        // Mute-Button erstellen
+        Button muteButton = new Button("Mute");
+        muteButton.setStyle(BUTTONSTYLE);
+        muteButton.setOnAction(event -> toggleMute());
+
+        // Hinzufügen des Mute-Buttons in die oberste rechte Ecke
+        HBox topRightControls = new HBox(muteButton);
+        topRightControls.setAlignment(Pos.TOP_RIGHT);
+        mainLayout.setTop(new VBox(ruleLabel, topRightControls));
+
         return new Scene(mainLayout, 1000, 800);
     }
+
+    private void toggleMute() {
+        if (mediaPlayer.isMute()) {
+            mediaPlayer.setMute(false);
+        } else {
+            mediaPlayer.setMute(true);
+        }
+    }
+
+
     private void createSudoku() {
         SudokuType selectedType = difficultyComboBox.getValue();
         try {

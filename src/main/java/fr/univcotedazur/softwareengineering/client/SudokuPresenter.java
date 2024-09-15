@@ -2,6 +2,10 @@ package fr.univcotedazur.softwareengineering.client;
 
 import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 import fr.univcotedazur.softwareengineering.sudoku.SudokuType;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +22,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +38,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
     private Button[][] cells;
     private SudokuController controller;
     private MediaPlayer mediaPlayer;
+    private Timeline blinkTimeline;
     private Label ruleLabel;
     private ComboBox<SudokuType> difficultyComboBox;
     private ListView<String> ruleList;
@@ -55,6 +62,8 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         sceneManager.setStartScene(createStartScene()); // Set the start scene
         sceneManager.setGameScene(createGameScene());   // Set the game scene
         sceneManager.showStartScene();// Show the start scene
+
+        startCellBlinking();
     }
 
     private Scene createStartScene() {
@@ -98,6 +107,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
                 cell.setPrefSize(80, 80); // Larger cells
                 cell.setAlignment(Pos.CENTER);
                 cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;");
+                cell.setDisable(true);
                 int finalRow = row;
                 int finalCol = col;
                 cell.setOnAction(event -> cellClicked(finalRow, finalCol));
@@ -163,11 +173,20 @@ public class SudokuPresenter extends Application implements SudokuObserver {
     private void createSudoku() {
         SudokuType selectedType = difficultyComboBox.getValue();
         try {
+            if (blinkTimeline != null) {
+                blinkTimeline.stop();
+            }
             Sudoku sudoku = controller.createSudoku(selectedType);
             sudoku.addObserver(this);
             updateSudoku(sudoku);
             ruleLabel.setText("Current Rule: None");
             updateRuleList();
+
+            for (int row = 0; row < SIZE; row++) {
+                for (int col = 0; col < SIZE; col++) {
+                    cells[row][col].setDisable(false);
+                }
+            }
         } catch (IOException ex) {
             sceneManager.showError("Error creating Sudoku: " + ex.getMessage());
         }
@@ -259,5 +278,27 @@ public class SudokuPresenter extends Application implements SudokuObserver {
             grid.add(label, i % 3, i / 3);
         }
         return grid;
+    }
+
+    private void startCellBlinking() {
+        // Timeline für das Blinken erstellen
+        blinkTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), event -> {
+            // Eine zufällige Zelle auswählen
+            int row = (int) (Math.random() * SIZE);
+            int col = (int) (Math.random() * SIZE);
+            Button cell = cells[row][col];
+
+            // Zelle hervorheben
+            cell.setStyle("-fx-background-color: #007BFF;"); // Goldene Farbe zum Hervorheben
+
+            // Rücksetzung nach kurzer Zeit
+            PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+            pause.setOnFinished(e -> cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;"));
+            pause.play();
+        }));
+
+        // Die Timeline kontinuierlich ablaufen lassen
+        blinkTimeline.setCycleCount(Animation.INDEFINITE);
+        blinkTimeline.play();
     }
 }

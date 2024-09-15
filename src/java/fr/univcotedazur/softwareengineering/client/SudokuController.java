@@ -23,7 +23,6 @@ public class SudokuController {
     private DeductionRuleFactory ruleFactory;
     private final List<DeductionRule> deductionRules;
     private Sudoku sudoku;
-    private SudokuChecker sudokuChecker;
     private String currentRuleName;
 
     public SudokuController() {
@@ -34,8 +33,8 @@ public class SudokuController {
     }
 
     public Sudoku createSudoku(SudokuType type) throws IOException {
+        SudokuChecker sudokuChecker = new SudokuChecker();
         sudoku = sudokuFactory.createSudoku(type);
-        sudokuChecker = new SudokuChecker();
         sudoku.addObserver(sudokuChecker);
         return sudoku;
     }

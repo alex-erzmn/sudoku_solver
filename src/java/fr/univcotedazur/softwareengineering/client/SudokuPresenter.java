@@ -35,6 +35,8 @@ public class SudokuPresenter extends Application implements SudokuObserver {
     private ObservableList<String> ruleListModel;
     private String currentRuleName;
     private SceneManager sceneManager; // Add SceneManager
+    private static final String FONT = "SansSerif";
+    private static final String BUTTONSTYLE = "-fx-background-color: #007BFF; -fx-text-fill: white;";
 
     @Override
     public void start(Stage primaryStage) {
@@ -53,11 +55,11 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         startLayout.setBackground(new Background(new BackgroundFill(Color.web("#F5F5F5"), CornerRadii.EMPTY, Insets.EMPTY)));
 
         Label title = new Label("Sudoku Solver");
-        title.setFont(Font.font("SansSerif", 36));
+        title.setFont(Font.font(FONT, 36));
         title.setTextFill(Color.web("#333333"));
 
-        Button startButton = new Button("Start Game");
-        startButton.setStyle("-fx-background-color: #007BFF; -fx-text-fill: white;");
+        Button startButton = new Button("Start");
+        startButton.setStyle(BUTTONSTYLE);
         startButton.setOnAction(event -> sceneManager.showGameScene()); // Show game scene on button click
 
         startLayout.getChildren().addAll(title, startButton);
@@ -83,7 +85,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         for (int row = 0; row < SIZE; row++) {
             for (int col = 0; col < SIZE; col++) {
                 Button cell = new Button("");
-                cell.setFont(Font.font("SansSerif", 24)); // Optional: larger font size
+                cell.setFont(Font.font(FONT, 24)); // Optional: larger font size
                 cell.setPrefSize(80, 80); // Larger cells
                 cell.setAlignment(Pos.CENTER);
                 cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;");
@@ -103,11 +105,11 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         controlPanel.setStyle("-fx-background-color: #F0F0F0;");
 
         Button createSudokuButton = new Button("Create Sudoku");
-        createSudokuButton.setStyle("-fx-background-color: #007BFF; -fx-text-fill: white;");
+        createSudokuButton.setStyle(BUTTONSTYLE);
         createSudokuButton.setOnAction(event -> createSudoku());
 
         Button solveButton = new Button("Solve");
-        solveButton.setStyle("-fx-background-color: #007BFF; -fx-text-fill: white;");
+        solveButton.setStyle(BUTTONSTYLE);
         solveButton.setOnAction(event -> solveStep());
 
         difficultyComboBox = new ComboBox<>(FXCollections.observableArrayList(SudokuType.values()));
@@ -123,7 +125,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
 
         // Rule Label
         ruleLabel = new Label("Current Rule: None");
-        ruleLabel.setFont(Font.font("SansSerif", 18));
+        ruleLabel.setFont(Font.font(FONT, 18));
         ruleLabel.setTextFill(Color.web("#333333"));
         mainLayout.setTop(ruleLabel);
 
@@ -223,7 +225,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         for (int i = 0; i < 9; i++) {
             int value = (i < possibleValues.size()) ? possibleValues.get(i) : 0;
             Label label = new Label(value == 0 ? "" : String.valueOf(value));
-            label.setFont(Font.font("SansSerif", 10));
+            label.setFont(Font.font(FONT, 10));
             label.setAlignment(Pos.CENTER);
             grid.add(label, i % 3, i / 3);
         }

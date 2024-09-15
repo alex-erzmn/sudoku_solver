@@ -1,4 +1,4 @@
-package fr.univcotedazur.softwareengineering.sudokufactory.sudoku.data;
+package fr.univcotedazur.softwareengineering.sudoku.data;
 
 import java.io.*;
 import java.util.ArrayList;

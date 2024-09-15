@@ -1,4 +1,4 @@
-package fr.univcotedazur.softwareengineering.sudokufactory;
+package fr.univcotedazur.softwareengineering.sudoku;
 
 public enum SudokuType {
     EASY,

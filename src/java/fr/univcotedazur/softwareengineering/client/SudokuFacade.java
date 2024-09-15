@@ -1,16 +1,13 @@
 package fr.univcotedazur.softwareengineering.client;
 
 import fr.univcotedazur.softwareengineering.deductionrules.DeductionRule;
-import fr.univcotedazur.softwareengineering.deductionrules.DR1;
-import fr.univcotedazur.softwareengineering.sudokufactory.SudokuFactory;
-import fr.univcotedazur.softwareengineering.sudokufactory.SudokuType;
-import fr.univcotedazur.softwareengineering.sudokufactory.sudoku.Sudoku;
+import fr.univcotedazur.softwareengineering.deductionrules.DeductionRuleFactory;
+import fr.univcotedazur.softwareengineering.sudoku.SudokuFactory;
+import fr.univcotedazur.softwareengineering.sudoku.SudokuType;
+import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import static fr.univcotedazur.softwareengineering.sudokufactory.SudokuType.RANDOM;
+import java.util.List;
 
 /**
  * Facade for the Sudoku application.
@@ -22,14 +19,12 @@ import static fr.univcotedazur.softwareengineering.sudokufactory.SudokuType.RAND
  */
 public class SudokuFacade {
     private SudokuFactory sudokuFactory;
-    private Map<String, DeductionRule> rulesMap;
+    private List<DeductionRule> deductionRules;
     private String currentRuleName;
 
     public SudokuFacade() {
         sudokuFactory = new SudokuFactory();
-        rulesMap = new HashMap<>();
-        DeductionRule dr1 = new DR1();
-        rulesMap.put("Naked Single", dr1);
+        deductionRules = new DeductionRuleFactory().createAllDeductionRules();
         currentRuleName = "None";
     }
 
@@ -38,14 +33,17 @@ public class SudokuFacade {
     }
 
     public String step(Sudoku sudoku) {
-        currentRuleName = "None"; // Zurücksetzen der Regel
-        for (Map.Entry<String, DeductionRule> entry : rulesMap.entrySet()) {
-            DeductionRule rule = entry.getValue();
+        currentRuleName = "None";
+
+        for (DeductionRule rule : deductionRules) {
             if (rule.run(sudoku)) {
-                currentRuleName = entry.getKey();
+                currentRuleName = rule.getName();
                 return currentRuleName;
             }
         }
-        return null; // Kein Fortschritt
+        return null;
     }
+
+
+
 }

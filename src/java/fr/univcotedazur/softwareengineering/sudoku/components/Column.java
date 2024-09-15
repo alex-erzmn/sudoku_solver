@@ -1,12 +1,12 @@
-package fr.univcotedazur.softwareengineering.sudokufactory.sudoku;
+package fr.univcotedazur.softwareengineering.sudoku.components;
 
-public class Box {
+public class Column implements RowColumnBox {
     private Cell[] cells;
 
-    public Box() {
+    public Column() {
         cells = new Cell[9];
         for (int i = 0; i < 9; i++) {
-            cells[i] = new Cell(0, false); // Standardmäßig alle Zellen leer und nicht initialisiert
+            cells[i] = new Cell(0); // Standardmäßig alle Zellen leer und nicht initialisiert
         }
     }
 
@@ -14,7 +14,7 @@ public class Box {
         return cells[index];
     }
 
-    public void setCell(int index, int value) {
+    public void setValue(int index, int value) {
         cells[index].setValue(value);
     }
 

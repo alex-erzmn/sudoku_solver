@@ -1,4 +1,4 @@
-package fr.univcotedazur.softwareengineering.sudokufactory.sudoku.data;
+package fr.univcotedazur.softwareengineering.sudoku.data;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,7 +13,6 @@ public class ReplaceDotsInFile {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                // Ersetze alle Punkte durch Nullen
                 String modifiedLine = line.replace('.', '0');
                 writer.write(modifiedLine);
                 writer.newLine();

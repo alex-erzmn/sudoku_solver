@@ -13,13 +13,13 @@ public class SudokuFileLoader {
     private static final int SUDOKU_SIZE = 9;
     private final Map<String, List<Sudoku>> sudokuCache = new HashMap<>();
     private static final String EASY_SUDOKU_PATH =
-            "src/java/fr/univcotedazur/softwareengineering/sudoku/data/easySudokus.txt";
+            "src/main/java/fr/univcotedazur/softwareengineering/sudoku/data/easySudokus.txt";
     private static final String MEDIUM_SUDOKU_PATH =
-            "src/java/fr/univcotedazur/softwareengineering/sudoku/data/mediumSudokus.txt";
+            "src/main/java/fr/univcotedazur/softwareengineering/sudoku/data/mediumSudokus.txt";
     private static final String HARD_SUDOKU_PATH =
-            "src/java/fr/univcotedazur/softwareengineering/sudoku/data/hardSudokus.txt";
+            "src/main/java/fr/univcotedazur/softwareengineering/sudoku/data/hardSudokus.txt";
     private static final String RANDOM_SUDOKU_PATH =
-            "src/java/fr/univcotedazur/softwareengineering/sudoku/data/randomSudokus.txt";
+            "src/main/java/fr/univcotedazur/softwareengineering/sudoku/data/randomSudokus.txt";
 
     private SudokuFileLoader() {
     }

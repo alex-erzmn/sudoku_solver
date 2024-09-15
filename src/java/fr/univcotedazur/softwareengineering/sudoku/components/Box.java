@@ -1,5 +1,7 @@
 package fr.univcotedazur.softwareengineering.sudoku.components;
 
+import java.util.List;
+
 public class Box implements RowColumnBox {
     private Cell[] cells;
 
@@ -12,6 +14,10 @@ public class Box implements RowColumnBox {
 
     public Cell getCell(int index) {
         return cells[index];
+    }
+
+    public List<Cell> getCells() {
+        return List.of(cells);
     }
 
     public void setValue(int index, int value) {

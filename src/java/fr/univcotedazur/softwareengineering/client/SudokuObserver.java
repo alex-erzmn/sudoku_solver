@@ -1,5 +1,16 @@
 package fr.univcotedazur.softwareengineering.client;
 
+import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
+
+/**
+ * Interface for the sudoku observer
+ * @implNote Observer pattern
+ */
 public interface SudokuObserver {
-    void updateSudoku();
+
+    /**
+     * Update the sudoku
+     * @param sudoku the sudoku to update
+     */
+    void updateSudoku(Sudoku sudoku);
 }

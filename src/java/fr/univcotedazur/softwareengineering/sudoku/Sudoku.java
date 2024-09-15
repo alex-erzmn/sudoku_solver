@@ -2,6 +2,7 @@ package fr.univcotedazur.softwareengineering.sudoku;
 
 import fr.univcotedazur.softwareengineering.client.SudokuObserver;
 import fr.univcotedazur.softwareengineering.sudoku.components.Box;
+import fr.univcotedazur.softwareengineering.sudoku.components.Cell;
 import fr.univcotedazur.softwareengineering.sudoku.components.Column;
 import fr.univcotedazur.softwareengineering.sudoku.components.Row;
 
@@ -9,11 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Represents a Sudoku grid. The grid is composed of 9 rows, 9 columns and 9 boxes.
+ * Each row, column and box is composed of 9 cells. Each cell can have a value between 1 and 9.
+ * The grid is initialized with all possible values for each cell.
+ * @since 12/09/2024
+ */
 public class Sudoku {
-    private Row[] rows;
-    private Column[] columns;
-    private Box[] boxes;
-    private List<SudokuObserver> observers;
+    private final Row[] rows;
+    private final Column[] columns;
+    private final Box[] boxes;
+    private final List<SudokuObserver> observers;
 
     public Sudoku() {
         rows = new Row[9];
@@ -58,7 +65,7 @@ public class Sudoku {
 
     private void notifyObservers() {
         for (SudokuObserver observer : observers) {
-            observer.updateSudoku();
+            observer.updateSudoku(this);
         }
     }
 
@@ -82,7 +89,11 @@ public class Sudoku {
         notifyObservers();
     }
 
-    public int getCell(int rowIndex, int colIndex) {
+    public Cell getCell(int rowIndex, int colIndex) {
+        return getRow(rowIndex).getCell(colIndex);
+    }
+
+    public int getValue(int rowIndex, int colIndex) {
         return getRow(rowIndex).getValue(colIndex);
     }
 
@@ -144,7 +155,7 @@ public class Sudoku {
         int[][] sudoku = new int[9][9];
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                sudoku[i][j] = getCell(i, j);
+                sudoku[i][j] = getValue(i, j);
             }
         }
         return sudoku;

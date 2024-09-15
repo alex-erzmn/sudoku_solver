@@ -3,17 +3,31 @@ package fr.univcotedazur.softwareengineering.deductionrules;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Factory class to create deduction rules. This class is a singleton.
+ * It is responsible for creating deduction rules.
+ * @since 12/09/2024
+ * @implNote Factory pattern & Singleton pattern
+ */
 public class DeductionRuleFactory {
 
-    public DeductionRule createDeductionRule(String ruleName) {
-        switch (ruleName) {
-            case "Naked Single":
-                return new DR1();
-            case "Hidden Single":
-                return new DR2();
-            default:
-                return null;
-        }
+    private DeductionRuleFactory() {
+    }
+
+    private static final class InstanceHolder {
+        private static final DeductionRuleFactory instance = new DeductionRuleFactory();
+    }
+
+    public static DeductionRuleFactory getInstance() {
+        return InstanceHolder.instance;
+    }
+
+    public DeductionRule createDeductionRule(DeductionRuleType ruleName) {
+        return switch (ruleName) {
+            case NAKED_SINGLE -> new DR1();
+            case HIDDEN_SINGLE -> new DR2();
+            default -> null;
+        };
     }
 
     public List<DeductionRule> createAllDeductionRules() {

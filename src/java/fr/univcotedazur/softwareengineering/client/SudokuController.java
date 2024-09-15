@@ -7,6 +7,7 @@ import fr.univcotedazur.softwareengineering.sudoku.SudokuType;
 import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,25 +16,34 @@ import java.util.List;
  * By using the Facade pattern, the client does not need to know the details of the Sudoku creation and solving process.
  * The client only needs to call the createSudoku() method to create a Sudoku and the solveSudoku() method to solve it.
  * @since 12/09/2024
- * @author Alexander Erzmann
+ * @implNote Facade pattern
  */
-public class SudokuFacade {
-    private SudokuFactory sudokuFactory;
-    private List<DeductionRule> deductionRules;
+public class SudokuController {
+    private final SudokuFactory sudokuFactory;
+    private DeductionRuleFactory ruleFactory;
+    private final List<DeductionRule> deductionRules;
+    private Sudoku sudoku;
+    private SudokuChecker sudokuChecker;
     private String currentRuleName;
 
-    public SudokuFacade() {
-        sudokuFactory = new SudokuFactory();
-        deductionRules = new DeductionRuleFactory().createAllDeductionRules();
+    public SudokuController() {
+        sudokuFactory = SudokuFactory.getInstance();
+        ruleFactory = DeductionRuleFactory.getInstance();
+        deductionRules = ruleFactory.createAllDeductionRules();
         currentRuleName = "None";
     }
 
     public Sudoku createSudoku(SudokuType type) throws IOException {
-        return sudokuFactory.createSudoku(type);
+        sudoku = sudokuFactory.createSudoku(type);
+        sudokuChecker = new SudokuChecker();
+        sudoku.addObserver(sudokuChecker);
+        return sudoku;
     }
 
-    public String step(Sudoku sudoku) {
+    public String step() {
         currentRuleName = "None";
+
+        if (sudoku == null) return null;
 
         for (DeductionRule rule : deductionRules) {
             if (rule.run(sudoku)) {
@@ -44,6 +54,21 @@ public class SudokuFacade {
         return null;
     }
 
+    public List<String> getDeductionRules() {
+        List<String> ruleNames = new ArrayList<>();
+        for (DeductionRule rule : deductionRules) {
+            ruleNames.add(rule.getName());
+        }
+        return ruleNames;
+    }
 
+    public Sudoku getSudoku() {
+        return sudoku;
+    }
 
+    public void setCell(int row, int col, int value) {
+        if (sudoku != null) {
+            sudoku.setCell(row, col, value);
+        }
+    }
 }

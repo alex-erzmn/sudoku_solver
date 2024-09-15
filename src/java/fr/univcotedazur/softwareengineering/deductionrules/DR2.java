@@ -4,6 +4,11 @@ import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 
 import java.util.Set;
 
+/**
+ * Deduction rule that applies the Hidden Single strategy. This strategy consists of finding cells that have only one
+ * possible value. In comparison to the Naked Single strategy, the possible value is not the only possible value
+ * in the cell, but it is the only possible value in the row, column or box.
+ */
 public class DR2 implements DeductionRule {
 
     private static final String NAME = "Hidden Single";
@@ -66,16 +71,14 @@ public class DR2 implements DeductionRule {
 
         if (count == 1) {
             if (row != -1) {
-
-                if (sudoku.getCell(row, targetIndex) == 0) {
+                if (sudoku.getValue(row, targetIndex) == 0) {
                     sudoku.setCell(row, targetIndex, value);
                     wasApplied = true;
                 }
-            } else if (col != -1 && sudoku.getCell(targetIndex, col) == 0) {
+            } else if (sudoku.getValue(targetIndex, col) == 0) {
                     sudoku.setCell(targetIndex, col, value);
                     wasApplied = true;
                 }
-
         }
 
         return wasApplied;
@@ -100,7 +103,7 @@ public class DR2 implements DeductionRule {
             }
         }
 
-        if (count == 1 && sudoku.getCell(targetRow, targetCol) == 0) {
+        if (count == 1 && sudoku.getValue(targetRow, targetCol) == 0) {
                 sudoku.setCell(targetRow, targetCol, value);
                 wasApplied = true;
             }

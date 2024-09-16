@@ -172,4 +172,15 @@ public class Sudoku {
         }
         return true;
     }
+
+    public void initializeGrid(int[][] grid) {
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                int value = grid[row][col];
+                if (value != 0) { // Nur festgelegte Werte setzen
+                    setValue(row, col, value);
+                }
+            }
+        }
+    }
 }

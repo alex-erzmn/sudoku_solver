@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+//TODO: Understand this!
 public class SudokuFileLoader {
 
     private static final int SUDOKU_SIZE = 9;
@@ -75,7 +76,7 @@ public class SudokuFileLoader {
                     if (value < 0 || value > 9) {
                         throw new IOException("Invalid number value in line: " + line);
                     }
-                    sudoku.setCell(row, col, value);
+                    sudoku.setValue(row, col, value);
                 }
 
                 row++;

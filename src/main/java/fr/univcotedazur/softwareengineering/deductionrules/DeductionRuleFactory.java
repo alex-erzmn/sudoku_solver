@@ -34,9 +34,7 @@ public class DeductionRuleFactory {
         List<DeductionRule> rules = new ArrayList<>();
         rules.add(new DR1());
         rules.add(new DR2());
-
-        //TODO: Add the other deduction rules here
-
+        rules.add(new DR3());
         return rules;
     }
 }

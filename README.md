@@ -7,7 +7,7 @@ The user can input a grid and the program will solve it. The program will also c
 grid is valid or not. The program will display the grid in a GUI.
 The authors of this project are:
 - Alexander Erzmann
-- Nikita
+- Mikita Sidarenka
 
 ## How to run the program
 1. Clone the repository
@@ -39,6 +39,8 @@ PROGRESS:
 - Send him GitHub-Link with access to the repository
 - Grid Input Format must be an array of 81 elements with 0 when a cell is empty and numbers otherwise ❓
 - The grid is linearized (lines follow each other in the table) ❓
+- /\ ASKING REGIN: Do we need a .jar File to run the Project or is it enough to run it in the IDE? ❓
+- Do we need Mockito Tests or is it OK with integration Tests? ❓
 - the GitHub repository web address must be sent by email to JC Regin (jcregin@gmail.com) before the end of the project.
 - the subject of the email must only be "SE github"
 - the name of the authors must be added in the GitHub and in the report

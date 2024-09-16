@@ -67,7 +67,7 @@ public class SudokuController {
 
     public void setCell(int row, int col, int value) {
         if (sudoku != null) {
-            sudoku.setCell(row, col, value);
+            sudoku.setValue(row, col, value);
         }
     }
 }

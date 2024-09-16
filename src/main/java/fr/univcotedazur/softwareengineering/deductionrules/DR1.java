@@ -39,7 +39,7 @@ public class DR1 implements DeductionRule {
 
         // Apply updates to the cells that were identified
         for (CellPosition cellPosition : cellsToUpdate) {
-            sudoku.setCell(cellPosition.row, cellPosition.col, cellPosition.value);
+            sudoku.setValue(cellPosition.row, cellPosition.col, cellPosition.value);
             wasApplied = true;
         }
 

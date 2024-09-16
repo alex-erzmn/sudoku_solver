@@ -82,7 +82,7 @@ public class Sudoku {
         return boxes[index];
     }
 
-    public void setCell(int rowIndex, int colIndex, int value) {
+    public void setValue(int rowIndex, int colIndex, int value) {
         getRow(rowIndex).setValue(colIndex, value);
         getColumn(colIndex).setValue(rowIndex, value);
         getBox(getBoxIndex(rowIndex, colIndex)).setValue(getCellIndexInBox(rowIndex, colIndex), value);

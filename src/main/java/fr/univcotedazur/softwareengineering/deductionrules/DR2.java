@@ -9,6 +9,7 @@ import java.util.Set;
  * possible value. In comparison to the Naked Single strategy, the possible value is not the only possible value
  * in the cell, but it is the only possible value in the row, column or box.
  */
+//TODO: Understand this!
 public class DR2 implements DeductionRule {
 
     private static final String NAME = "Hidden Single";
@@ -84,10 +85,10 @@ public class DR2 implements DeductionRule {
 
         if (count == 1) {
             if (row != -1 && sudoku.getValue(row, targetIndex) == 0) {
-                sudoku.setCell(row, targetIndex, value);
+                sudoku.setValue(row, targetIndex, value);
                 return true;
             } else if (col != -1 && sudoku.getValue(targetIndex, col) == 0) {
-                sudoku.setCell(targetIndex, col, value);
+                sudoku.setValue(targetIndex, col, value);
                 return true;
             }
         }
@@ -113,7 +114,7 @@ public class DR2 implements DeductionRule {
         }
 
         if (count == 1 && sudoku.getValue(targetRow, targetCol) == 0) {
-            sudoku.setCell(targetRow, targetCol, value);
+            sudoku.setValue(targetRow, targetCol, value);
             return true;
         }
         return false;

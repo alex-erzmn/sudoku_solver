@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/CheckObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/DisplayObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add DR3 and improve the handling of invalid entries by clients">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleMapFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SceneManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SceneManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726183738803</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add DR3 and improve the handling of invalid entries by clients">
+      <option name="closed" value="true" />
+      <created>1726676550853</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726676550853</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +186,7 @@
     <MESSAGE value="Add SudokuFactory and SudokuSolver with DeductionRules" />
     <MESSAGE value="Add GUI" />
     <MESSAGE value="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern." />
+    <MESSAGE value="Add DR3 and improve the handling of invalid entries by clients" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DR3 and improve the handling of invalid entries by clients" />
   </component>
 </project>

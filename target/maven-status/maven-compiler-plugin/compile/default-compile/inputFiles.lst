@@ -1,10 +1,12 @@
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\components\Cell.java
+C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\client\CheckObserver.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\client\SceneManager.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\deductionrules\DR1.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\components\Row.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\data\SudokuFileLoader.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\Main.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\Sudoku.java
+C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\deductionrules\DR3.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\deductionrules\DeductionRule.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\client\SudokuController.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\client\SudokuPresenter.java
@@ -16,5 +18,6 @@ C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwar
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\SudokuType.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\components\Box.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\sudoku\components\Column.java
+C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\client\DisplayObserver.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory.java
 C:\Users\alles\IdeaProjects\sudoku_solver\src\main\java\fr\univcotedazur\softwareengineering\deductionrules\DR2.java

@@ -1,6 +1,7 @@
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleType.class
 fr\univcotedazur\softwareengineering\sudoku\SudokuFactory$InstanceHolder.class
 fr\univcotedazur\softwareengineering\sudoku\components\Cell.class
+fr\univcotedazur\softwareengineering\client\CheckObserver.class
 fr\univcotedazur\softwareengineering\deductionrules\DR2.class
 fr\univcotedazur\softwareengineering\sudoku\components\RowColumnBox.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory$InstanceHolder.class
@@ -16,6 +17,7 @@ fr\univcotedazur\softwareengineering\deductionrules\DR1.class
 fr\univcotedazur\softwareengineering\Main.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory$1.class
 fr\univcotedazur\softwareengineering\sudoku\components\Box.class
+fr\univcotedazur\softwareengineering\client\DisplayObserver.class
 fr\univcotedazur\softwareengineering\client\SudokuObserver.class
 fr\univcotedazur\softwareengineering\client\SudokuPresenter.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRule.class
@@ -24,3 +26,4 @@ fr\univcotedazur\softwareengineering\client\SudokuChecker.class
 fr\univcotedazur\softwareengineering\deductionrules\DR1$CellPosition.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory.class
 fr\univcotedazur\softwareengineering\sudoku\data\SudokuFileLoader.class
+fr\univcotedazur\softwareengineering\deductionrules\DR3.class

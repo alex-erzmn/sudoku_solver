@@ -33,9 +33,8 @@ public class SudokuController {
     }
 
     public Sudoku createSudoku(SudokuType type) throws IOException {
-        SudokuChecker sudokuChecker = new SudokuChecker();
         sudoku = sudokuFactory.createSudoku(type);
-        sudoku.addObserver(sudokuChecker);
+        sudoku.initializePossibleValues();
         return sudoku;
     }
 

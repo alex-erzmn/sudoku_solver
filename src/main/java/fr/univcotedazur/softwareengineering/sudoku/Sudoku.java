@@ -1,10 +1,12 @@
 package fr.univcotedazur.softwareengineering.sudoku;
 
+import fr.univcotedazur.softwareengineering.client.DisplayObserver;
 import fr.univcotedazur.softwareengineering.client.SudokuObserver;
 import fr.univcotedazur.softwareengineering.sudoku.components.Box;
 import fr.univcotedazur.softwareengineering.sudoku.components.Cell;
 import fr.univcotedazur.softwareengineering.sudoku.components.Column;
 import fr.univcotedazur.softwareengineering.sudoku.components.Row;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +20,11 @@ import java.util.Set;
  */
 public class Sudoku {
     public static final int SIZE = 9;
+    @Getter
     private final Row[] rows;
+    @Getter
     private final Column[] columns;
+    @Getter
     private final Box[] boxes;
     private final List<SudokuObserver> observers;
 
@@ -34,6 +39,48 @@ public class Sudoku {
             columns[i] = new Column();
             boxes[i] = new Box();
         }
+    }
+
+    public void addObserver(SudokuObserver observer) {
+        observers.add(observer);
+    }
+
+    private void notifyObservers() {
+        for (SudokuObserver observer : observers) {
+            observer.updateSudoku(this);
+        }
+    }
+
+    private void notifyDisplayObservers() {
+        for (SudokuObserver observer : observers) {
+            if (observer instanceof DisplayObserver) {
+                observer.updateSudoku(this);
+            }
+        }
+    }
+
+    public void setValue(int rowIndex, int colIndex, int value) {
+        rows[rowIndex].setValue(colIndex, value);
+        columns[colIndex].setValue(rowIndex, value);
+        boxes[getBoxIndex(rowIndex, colIndex)].setValue(getCellIndexInBox(rowIndex, colIndex), value);
+        removePossibleValueFromPeers(rowIndex, colIndex, value);
+        notifyObservers();
+    }
+
+    public int getValue(int rowIndex, int colIndex) {
+        return rows[rowIndex].getValue(colIndex);
+    }
+
+    private int getBoxIndex(int rowIndex, int colIndex) {
+        return (rowIndex / 3) * 3 + (colIndex / 3);
+    }
+
+    private int getCellIndexInBox(int rowIndex, int colIndex) {
+        return (rowIndex % 3) * 3 + (colIndex % 3);
+    }
+
+    public Set<Integer> getPossibleValues(int rowIndex, int colIndex) {
+        return rows[rowIndex].getCell(colIndex).getPossibleValues();
     }
 
     public void initializePossibleValues() {
@@ -53,79 +100,24 @@ public class Sudoku {
             possibleValues.add(i);
         }
         for (int i = 0; i < SIZE; i++) {
-            possibleValues.remove(Integer.valueOf(getRow(rowIndex).getValue(i)));
-            possibleValues.remove(Integer.valueOf(getColumn(colIndex).getValue(i)));
-            possibleValues.remove(Integer.valueOf(getBox(getBoxIndex(rowIndex, colIndex)).getValue(i)));
+            possibleValues.remove(Integer.valueOf(rows[rowIndex].getValue(i)));
+            possibleValues.remove(Integer.valueOf(columns[colIndex].getValue(i)));
+            possibleValues.remove(Integer.valueOf(boxes[getBoxIndex(rowIndex, colIndex)].getValue(i)));
         }
         return possibleValues;
     }
 
-    public void addObserver(SudokuObserver observer) {
-        observers.add(observer);
-    }
-
-    private void notifyObservers() {
-        for (SudokuObserver observer : observers) {
-            observer.updateSudoku(this);
-        }
-    }
-
-    public Row getRow(int index) {
-        return rows[index];
-    }
-
-    public Column getColumn(int index) {
-        return columns[index];
-    }
-
-    public Box getBox(int index) {
-        return boxes[index];
-    }
-
-    public void setValue(int rowIndex, int colIndex, int value) {
-        getRow(rowIndex).setValue(colIndex, value);
-        getColumn(colIndex).setValue(rowIndex, value);
-        getBox(getBoxIndex(rowIndex, colIndex)).setValue(getCellIndexInBox(rowIndex, colIndex), value);
-        removePossibleValueFromPeers(rowIndex, colIndex, value);
-        notifyObservers();
-    }
-
-    public Cell getCell(int rowIndex, int colIndex) {
-        return getRow(rowIndex).getCell(colIndex);
-    }
-
-    public int getValue(int rowIndex, int colIndex) {
-        return getRow(rowIndex).getValue(colIndex);
-    }
-
-    private int getBoxIndex(int rowIndex, int colIndex) {
-        return (rowIndex / 3) * 3 + (colIndex / 3);
-    }
-
-    private int getCellIndexInBox(int rowIndex, int colIndex) {
-        return (rowIndex % 3) * 3 + (colIndex % 3);
-    }
-
-    public Set<Integer> getPossibleValues(int rowIndex, int colIndex) {
-        return getRow(rowIndex).getCell(colIndex).getPossibleValues();
-    }
-
     public void addPossibleValue(int rowIndex, int colIndex, int value) {
-        getRow(rowIndex).getCell(colIndex).addPossibleValue(value);
-        getColumn(colIndex).getCell(rowIndex).addPossibleValue(value);
-        getBox(getBoxIndex(rowIndex, colIndex)).getCell(getCellIndexInBox(rowIndex, colIndex)).addPossibleValue(value);
+        rows[rowIndex].getCell(colIndex).addPossibleValue(value);
+        columns[colIndex].getCell(rowIndex).addPossibleValue(value);
+        boxes[getBoxIndex(rowIndex, colIndex)].getCell(getCellIndexInBox(rowIndex, colIndex)).addPossibleValue(value);
     }
 
     public void removePossibleValue(int rowIndex, int colIndex, int value) {
-        getRow(rowIndex).getCell(colIndex).removePossibleValue(value);
-        getColumn(colIndex).getCell(rowIndex).removePossibleValue(value);
-        getBox(getBoxIndex(rowIndex, colIndex)).getCell(getCellIndexInBox(rowIndex, colIndex)).removePossibleValue(value);
-    }
-
-    public void removePossibleValues(int rowIndex, int colIndex, Set<Integer> values) {
-        for (Integer value : values) {
-            removePossibleValue(rowIndex, colIndex, value);
-        }
+        rows[rowIndex].getCell(colIndex).removePossibleValue(value);
+        columns[colIndex].getCell(rowIndex).removePossibleValue(value);
+        boxes[getBoxIndex(rowIndex, colIndex)].getCell(getCellIndexInBox(rowIndex, colIndex)).removePossibleValue(value);
+        notifyDisplayObservers();
     }
 
     private void removePossibleValueFromPeers(int row, int col, int value) {

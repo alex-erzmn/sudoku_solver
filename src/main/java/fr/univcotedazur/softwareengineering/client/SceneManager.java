@@ -4,22 +4,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+import lombok.Setter;
 
 public class SceneManager {
     private final Stage stage;
+    @Setter
     private Scene startScene;
+    @Setter
     private Scene gameScene;
 
     public SceneManager(Stage stage) {
         this.stage = stage;
-    }
-
-    public void setStartScene(Scene scene) {
-        this.startScene = scene;
-    }
-
-    public void setGameScene(Scene scene) {
-        this.gameScene = scene;
     }
 
     public void showStartScene() {

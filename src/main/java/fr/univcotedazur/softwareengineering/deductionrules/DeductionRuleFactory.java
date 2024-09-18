@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Factory class to create deduction rules. This class is a singleton.
- * It is responsible for creating deduction rules.
+ * It is responsible for creating deduction rules. It uses the Factory pattern to create deduction rules.
  * @since 12/09/2024
  * @implNote Factory pattern & Singleton pattern
  */
@@ -26,6 +26,7 @@ public class DeductionRuleFactory {
         return switch (ruleName) {
             case NAKED_SINGLE -> new DR1();
             case HIDDEN_SINGLE -> new DR2();
+            case BOX_LINE_REDUCTION -> new DR3();
             default -> null;
         };
     }

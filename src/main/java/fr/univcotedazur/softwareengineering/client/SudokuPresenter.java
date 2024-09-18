@@ -9,6 +9,7 @@ import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -23,6 +24,7 @@ import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
+import lombok.Getter;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,8 +35,9 @@ import java.util.Set;
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.SIZE;
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.isSolved;
 
-public class SudokuPresenter extends Application implements SudokuObserver {
+public class SudokuPresenter extends Application implements DisplayObserver {
 
+    @Getter
     private Button[][] cells;
     private SudokuController controller;
     private MediaPlayer mediaPlayer;
@@ -44,7 +47,19 @@ public class SudokuPresenter extends Application implements SudokuObserver {
     private ListView<String> ruleList;
     private ObservableList<String> ruleListModel;
     private String currentRuleName;
-    private SceneManager sceneManager; // Add SceneManager
+    private SceneManager sceneManager;
+    @FXML
+    @Getter
+    private Button muteButton;
+    @FXML
+    @Getter
+    private Button startButton;
+    @FXML
+    @Getter
+    private Button createSudokuButton;
+    @FXML
+    @Getter
+    private Button solveButton;
     private static final String FONT = "SansSerif";
     private static final String BUTTONSTYLE = "-fx-background-color: #007BFF; -fx-text-fill: white;";
 
@@ -76,7 +91,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         title.setFont(Font.font(FONT, 36));
         title.setTextFill(Color.web("#333333"));
 
-        Button startButton = new Button("Start");
+        startButton = new Button("Start");
         startButton.setStyle(BUTTONSTYLE);
         startButton.setOnAction(event -> sceneManager.showGameScene()); // Show game scene on button click
 
@@ -123,13 +138,14 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         controlPanel.setAlignment(Pos.TOP_LEFT);
         controlPanel.setStyle("-fx-background-color: #F0F0F0;");
 
-        Button createSudokuButton = new Button("Create Sudoku");
+        createSudokuButton = new Button("Create Sudoku");
         createSudokuButton.setStyle(BUTTONSTYLE);
         createSudokuButton.setOnAction(event -> createSudoku());
 
-        Button solveButton = new Button("Solve");
+        solveButton = new Button("Solve");
         solveButton.setStyle(BUTTONSTYLE);
         solveButton.setOnAction(event -> solveStep());
+        solveButton.setDisable(true);
 
         difficultyComboBox = new ComboBox<>(FXCollections.observableArrayList(SudokuType.values()));
         difficultyComboBox.setValue(SudokuType.RANDOM);
@@ -149,7 +165,7 @@ public class SudokuPresenter extends Application implements SudokuObserver {
         mainLayout.setTop(ruleLabel);
 
         // Mute-Button erstellen
-        Button muteButton = new Button("Mute");
+        muteButton = new Button("Mute");
         muteButton.setStyle(BUTTONSTYLE);
         muteButton.setOnAction(event -> toggleMute());
 
@@ -177,6 +193,8 @@ public class SudokuPresenter extends Application implements SudokuObserver {
                 blinkTimeline.stop();
             }
             Sudoku sudoku = controller.createSudoku(selectedType);
+            SudokuChecker sudokuChecker = new SudokuChecker(this);
+            sudoku.addObserver(sudokuChecker);
             sudoku.addObserver(this);
             updateSudoku(sudoku);
             ruleLabel.setText("Current Rule: None");
@@ -187,6 +205,8 @@ public class SudokuPresenter extends Application implements SudokuObserver {
                     cells[row][col].setDisable(false);
                 }
             }
+
+            solveButton.setDisable(false);
         } catch (IOException ex) {
             sceneManager.showError("Error creating Sudoku: " + ex.getMessage());
         }
@@ -244,7 +264,6 @@ public class SudokuPresenter extends Application implements SudokuObserver {
     public void updateSudoku(Sudoku sudoku) {
         if (sudoku == null) return;
 
-        sudoku.initializePossibleValues();
         int[][] board = sudoku.getSudokuGrid();
         for (int row = 0; row < SIZE; row++) {
             for (int col = 0; col < SIZE; col++) {

@@ -5,53 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add .txt Sudoku Datastructure, Refactor Sudoku Dataformat and implement Observer and Factory Pattern.">
-      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/easySudokus.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_easy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_hard.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_medium.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleMapFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/Input_easy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_hard.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_medium.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/input_random.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$PROJECT_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sudoku_solver.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI$CellButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/client/SudokuObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/DR1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/DeductionRule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/solver/SudokuSolver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/SudokuFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Column.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Row.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/Sudoku.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/SudokuReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/SudokuWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/sudoku_input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/client/SudokuGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/DR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/DeductionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/solver/SudokuSolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/SudokuFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/SudokuFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/SudokuWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/sudokufactory/sudoku/data/sudoku_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/fr/univcotedazur/softwareengineering/sudokuFactory/sudoku/data/input_random.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/CheckObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/DisplayObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleMapFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SceneManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SceneManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +34,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -80,30 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SudokuGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SudokuReader.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SudokuWriter.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alles/IdeaProjects/sudoku_solver&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.SudokuGUI.executor": "Run",
+    "Application.SudokuReader.executor": "Run",
+    "Application.SudokuWriter.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alles/IdeaProjects/sudoku_solver",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alles\IdeaProjects\sudoku_solver" />
@@ -112,6 +90,21 @@
       <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\java\fr\univcotedazur\softwareengineering\sudokufactory\sudoku\data" />
       <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\java\fr\univcotedazur\softwareengineering\sudokuFactory\sudoku\data" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SudokuSolver" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SudokuSolver" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

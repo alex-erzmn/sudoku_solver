@@ -1,26 +1,19 @@
 package fr.univcotedazur.softwareengineering.sudoku.components;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
 public class Cell {
+    @Setter
     private int value;
     private final Set<Integer> possibleValues = new HashSet<>();
 
     public Cell(int value) {
         this.value = value;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public Set<Integer> getPossibleValues() {
-        return possibleValues;
     }
 
     public void addPossibleValue(int value) {

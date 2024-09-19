@@ -59,7 +59,14 @@ public class Sudoku {
         }
     }
 
+    public int getValue(int rowIndex, int colIndex) {
+        return rows[rowIndex].getValue(colIndex);
+    }
+
     public void setValue(int rowIndex, int colIndex, int value) {
+        if(getValue(rowIndex, colIndex) != 0) {
+            return;
+        }
         rows[rowIndex].setValue(colIndex, value);
         columns[colIndex].setValue(rowIndex, value);
         boxes[getBoxIndex(rowIndex, colIndex)].setValue(getCellIndexInBox(rowIndex, colIndex), value);
@@ -67,9 +74,6 @@ public class Sudoku {
         notifyObservers();
     }
 
-    public int getValue(int rowIndex, int colIndex) {
-        return rows[rowIndex].getValue(colIndex);
-    }
 
     private int getBoxIndex(int rowIndex, int colIndex) {
         return (rowIndex / 3) * 3 + (colIndex / 3);
@@ -96,6 +100,9 @@ public class Sudoku {
 
     private List<Integer> calculatePossibleValues(int rowIndex, int colIndex) {
         List<Integer> possibleValues = new ArrayList<>();
+        if (getValue(rowIndex, colIndex) != 0) {
+            return possibleValues;
+        }
         for (int i = 1; i <= SIZE; i++) {
             possibleValues.add(i);
         }
@@ -144,35 +151,14 @@ public class Sudoku {
         }
     }
 
-    public int[][] getSudokuGrid() {
-        int[][] sudoku = new int[SIZE][SIZE];
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                sudoku[i][j] = getValue(i, j);
-            }
-        }
-        return sudoku;
-    }
-
-    public static boolean isSolved(Sudoku sudoku) {
+    public boolean isSolved() {
         for (int row = 0; row < SIZE; row++) {
             for (int col = 0; col < SIZE; col++) {
-                if (sudoku.getValue(row, col) == 0) {
+                if (getValue(row, col) == 0) {
                     return false;
                 }
             }
         }
         return true;
-    }
-
-    public void initializeGrid(int[][] grid) {
-        for (int row = 0; row < SIZE; row++) {
-            for (int col = 0; col < SIZE; col++) {
-                int value = grid[row][col];
-                if (value != 0) { // Nur festgelegte Werte setzen
-                    setValue(row, col, value);
-                }
-            }
-        }
     }
 }

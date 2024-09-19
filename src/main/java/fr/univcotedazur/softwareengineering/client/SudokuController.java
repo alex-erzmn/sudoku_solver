@@ -5,6 +5,7 @@ import fr.univcotedazur.softwareengineering.deductionrules.DeductionRuleFactory;
 import fr.univcotedazur.softwareengineering.sudoku.SudokuFactory;
 import fr.univcotedazur.softwareengineering.sudoku.SudokuType;
 import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
+import lombok.Getter;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +23,9 @@ public class SudokuController {
     private final SudokuFactory sudokuFactory;
     private DeductionRuleFactory ruleFactory;
     private final List<DeductionRule> deductionRules;
+    @Getter
     private Sudoku sudoku;
+    @Getter
     private String currentRuleName;
 
     public SudokuController() {
@@ -58,10 +61,6 @@ public class SudokuController {
             ruleNames.add(rule.getName());
         }
         return ruleNames;
-    }
-
-    public Sudoku getSudoku() {
-        return sudoku;
     }
 
     public void setCell(int row, int col, int value) {

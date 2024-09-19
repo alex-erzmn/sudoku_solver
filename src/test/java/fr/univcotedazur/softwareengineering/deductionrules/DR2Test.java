@@ -1,5 +1,16 @@
 package fr.univcotedazur.softwareengineering.deductionrules;
 
+import org.junit.jupiter.api.Test;
+
 public class DR2Test {
-    //TODO: Add tests
+
+    @Test
+    public void runTest_Successful() {
+       //TODO: write test
+    }
+
+    @Test
+    public void runTest_Failure() {
+        //TODO: write test
+    }
 }

@@ -1,6 +1,5 @@
 package fr.univcotedazur.softwareengineering.sudoku;
 
-import fr.univcotedazur.softwareengineering.sudoku.data.SudokuFileLoader;
 import java.io.IOException;
 
 /**

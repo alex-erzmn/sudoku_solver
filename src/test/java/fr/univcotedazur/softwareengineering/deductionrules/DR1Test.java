@@ -16,7 +16,7 @@ public class DR1Test {
     private TestSudokuFactory testSudokuFactory;
 
     @Test
-    public void testRunSuccessful() {
+    public void runTest_Successful() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createEasySudoku();
@@ -30,7 +30,7 @@ public class DR1Test {
     }
 
     @Test
-    public void testRunUnsuccessful() {
+    public void runTest_Failure() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createHardSudoku();

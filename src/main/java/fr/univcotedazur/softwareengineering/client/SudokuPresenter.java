@@ -33,7 +33,6 @@ import java.util.Set;
 
 
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.SIZE;
-import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.isSolved;
 
 public class SudokuPresenter extends Application implements DisplayObserver {
 
@@ -122,10 +121,6 @@ public class SudokuPresenter extends Application implements DisplayObserver {
                 cell.setPrefSize(80, 80); // Larger cells
                 cell.setAlignment(Pos.CENTER);
                 cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;");
-                cell.setDisable(true);
-                int finalRow = row;
-                int finalCol = col;
-                cell.setOnAction(event -> cellClicked(finalRow, finalCol));
                 cells[row][col] = cell;
                 boardPanel.add(cell, col, row);
             }
@@ -202,6 +197,11 @@ public class SudokuPresenter extends Application implements DisplayObserver {
 
             for (int row = 0; row < SIZE; row++) {
                 for (int col = 0; col < SIZE; col++) {
+                    if(sudoku.getValue(row, col) == 0) {
+                        int finalRow = row;
+                        int finalCol = col;
+                        cells[row][col].setOnAction(event -> cellClicked(finalRow, finalCol));
+                    }
                     cells[row][col].setDisable(false);
                 }
             }
@@ -218,7 +218,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
             ruleLabel.setText("Current Rule: " + ruleName);
             currentRuleName = ruleName;
             updateRuleList();
-            if (isSolved(controller.getSudoku())) {
+            if (controller.getSudoku().isSolved()) {
                 sceneManager.showInfo("Sudoku solved!");
             }
         } else {
@@ -264,7 +264,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     public void updateSudoku(Sudoku sudoku) {
         if (sudoku == null) return;
 
-        int[][] board = sudoku.getSudokuGrid();
+        int[][] board = getSudokuGrid(sudoku);
         for (int row = 0; row < SIZE; row++) {
             for (int col = 0; col < SIZE; col++) {
                 int value = board[row][col];
@@ -275,8 +275,9 @@ public class SudokuPresenter extends Application implements DisplayObserver {
                     cells[row][col].setText("");
                     cells[row][col].setStyle("-fx-background-color: #FFFFFF;");
                 } else {
+                    cells[row][col].setOnAction(null);
                     cells[row][col].setText(String.valueOf(value));
-                    cells[row][col].setGraphic(null); // Remove any previous graphics
+                    cells[row][col].setGraphic(null);
                     cells[row][col].setStyle("-fx-background-color: #C8C8C8;");
                     cells[row][col].setTextFill(Color.BLACK);
                 }
@@ -319,5 +320,15 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         // Die Timeline kontinuierlich ablaufen lassen
         blinkTimeline.setCycleCount(Animation.INDEFINITE);
         blinkTimeline.play();
+    }
+
+    private int[][] getSudokuGrid(Sudoku sudoku) {
+        int[][] sudokuAsGrid = new int[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                sudokuAsGrid[i][j] = sudoku.getValue(i, j);
+            }
+        }
+        return sudokuAsGrid;
     }
 }

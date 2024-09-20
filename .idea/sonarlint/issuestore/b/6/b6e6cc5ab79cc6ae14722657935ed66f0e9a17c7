@@ -1,9 +1,9 @@
 
 œ
-java:S1192"SDefine a constant instead of duplicating this literal "Current Rule: None" 3 times.(üõ‹ëüÿÿÿÿ8½¡Ùİ 2J$4e62609c-c4be-4627-bd32-6341121689a3
+java:S1192"SDefine a constant instead of duplicating this literal "Current Rule: None" 3 times.(üõ‹ëüÿÿÿÿ8½¡Ùİ 2J$f4c13eb4-4370-4c15-9470-111c25c2cf87
 †
-java:S1126°"BReplace this if-then-else statement by a single method invocation.(êŠ¶ç8Ø¡Ùİ 2J$c8e6e7d5-d56f-449a-8cf2-5cd530fa7a5c
+java:S1126°"BReplace this if-then-else statement by a single method invocation.(êŠ¶ç8Ø¡Ùİ 2J$756b3d48-88ae-4163-aaf2-ee9eaca1df20
 m
-java:S2140³")Use "java.util.Random.nextInt()" instead.(Ô–²ß8ã¡Ùİ 2J$ac29c211-6c71-4170-a847-dcbe73e0f12a
+java:S2140³")Use "java.util.Random.nextInt()" instead.(Ô–²ß8ã¡Ùİ 2J$6493c1db-6b7f-4410-93a9-6c93d4f71e43
 r
-java:S2140´")Use "java.util.Random.nextInt()" instead.(œßµôúÿÿÿÿ8ã¡Ùİ 2J$dc1c4693-8ce4-4d4d-b455-e2b04fac2a54
+java:S2140´")Use "java.util.Random.nextInt()" instead.(œßµôúÿÿÿÿ8ã¡Ùİ 2J$41b63721-45ea-4573-8c8a-46a036e738ca

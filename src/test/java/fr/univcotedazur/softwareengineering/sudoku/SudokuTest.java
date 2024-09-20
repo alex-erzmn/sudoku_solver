@@ -82,7 +82,7 @@ public class SudokuTest {
     @Test
     public void initializePossibleValuesTest() {
         //arrange
-        Sudoku easySudoku = testSudokuFactory.createEasySudoku();
+        Sudoku easySudoku = testSudokuFactory.createEasySudokuWithoutPossibleValues();
 
         //act
         easySudoku.initializePossibleValues();

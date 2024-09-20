@@ -8,14 +8,14 @@ fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory$Instanc
 fr\univcotedazur\softwareengineering\client\SudokuController.class
 fr\univcotedazur\softwareengineering\client\SceneManager.class
 fr\univcotedazur\softwareengineering\sudoku\SudokuFactory.class
-fr\univcotedazur\softwareengineering\sudoku\data\SudokuFileLoader$1.class
-fr\univcotedazur\softwareengineering\sudoku\data\SudokuFileLoader$InstanceHolder.class
 fr\univcotedazur\softwareengineering\sudoku\components\Row.class
 fr\univcotedazur\softwareengineering\sudoku\components\Column.class
+fr\univcotedazur\softwareengineering\sudoku\SudokuFileLoader$InstanceHolder.class
 fr\univcotedazur\softwareengineering\sudoku\SudokuType.class
 fr\univcotedazur\softwareengineering\deductionrules\DR1.class
 fr\univcotedazur\softwareengineering\Main.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory$1.class
+fr\univcotedazur\softwareengineering\sudoku\SudokuFileLoader.class
 fr\univcotedazur\softwareengineering\sudoku\components\Box.class
 fr\univcotedazur\softwareengineering\client\DisplayObserver.class
 fr\univcotedazur\softwareengineering\client\SudokuObserver.class
@@ -25,5 +25,5 @@ fr\univcotedazur\softwareengineering\sudoku\Sudoku.class
 fr\univcotedazur\softwareengineering\client\SudokuChecker.class
 fr\univcotedazur\softwareengineering\deductionrules\DR1$CellPosition.class
 fr\univcotedazur\softwareengineering\deductionrules\DeductionRuleFactory.class
-fr\univcotedazur\softwareengineering\sudoku\data\SudokuFileLoader.class
+fr\univcotedazur\softwareengineering\sudoku\SudokuFileLoader$1.class
 fr\univcotedazur\softwareengineering\deductionrules\DR3.class

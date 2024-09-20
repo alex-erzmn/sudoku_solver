@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.959" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.931" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\alles\AppData\Local\Temp\surefire11219141579985005559\surefirebooter-20240918184012982_3.jar C:\Users\alles\AppData\Local\Temp\surefire11219141579985005559 2024-09-18T18-40-12_809-jvmRun1 surefire-20240918184012982_1tmp surefire_0-20240918184012982_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\alles\AppData\Local\Temp\surefire12643084276301426843\surefirebooter-20240919224210750_3.jar C:\Users\alles\AppData\Local\Temp\surefire12643084276301426843 2024-09-19T22-42-10_562-jvmRun1 surefire-20240919224210750_1tmp surefire_0-20240919224210750_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\alles\IdeaProjects\sudoku_solver\target\test-classes;C:\Users\alles\IdeaProjects\sudoku_solver\target\classes;C:\Users\alles\.m2\repository\org\openjfx\javafx-controls\20.0.1\javafx-controls-20.0.1.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-controls\20.0.1\javafx-controls-20.0.1-win.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-fxml\20.0.1\javafx-fxml-20.0.1.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-fxml\20.0.1\javafx-fxml-20.0.1-win.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-media\21.0.2\javafx-media-21.0.2.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-media\21.0.2\javafx-media-21.0.2-win.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-base\20.0.1\javafx-base-20.0.1.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-base\20.0.1\javafx-base-20.0.1-win.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-graphics\20.0.1\javafx-graphics-20.0.1.jar;C:\Users\alles\.m2\repository\org\openjfx\javafx-graphics\20.0.1\javafx-graphics-20.0.1-win.jar;C:\Users\alles\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\alles\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\alles\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\alles\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\alles\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\alles\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\alles\.m2\repository\org\mockito\mockito-junit-jupiter\5.9.0\mockito-junit-jupiter-5.9.0.jar;C:\Users\alles\.m2\repository\org\mockito\mockito-core\5.9.0\mockito-core-5.9.0.jar;C:\Users\alles\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\alles\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.11\byte-buddy-agent-1.14.11.jar;C:\Users\alles\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\alles\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\alles\AppData\Local\Temp\surefire11219141579985005559\surefirebooter-20240918184012982_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\alles\AppData\Local\Temp\surefire12643084276301426843\surefirebooter-20240919224210750_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -58,6 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="testRunUnsuccessful" classname="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.943"/>
-  <testcase name="testRunSuccessful" classname="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.0"/>
+  <testcase name="runTest_Failure" classname="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.916"/>
+  <testcase name="runTest_Successful" classname="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" time="0.0"/>
 </testsuite>

@@ -40,12 +40,10 @@ public class DR3 implements DeductionRule {
                     int rowToClear = rowsWithNum.iterator().next();
 
                     for (int col = 0; col < 9; col++) {
-                        if (col < boxStartCol || col >= boxStartCol + 3) {
-                            if (sudoku.getPossibleValues(rowToClear, col).contains(num)) {
+                        if ((col < boxStartCol || col >= boxStartCol + 3) && sudoku.getPossibleValues(rowToClear, col).contains(num)) {
                                 sudoku.removePossibleValue(rowToClear, col, num);
                                 wasApplied = true;
                             }
-                        }
                     }
                 }
 
@@ -53,12 +51,11 @@ public class DR3 implements DeductionRule {
                     int colToClear = colsWithNum.iterator().next();
 
                     for (int row = 0; row < 9; row++) {
-                        if (row < boxStartRow || row >= boxStartRow + 3) {
-                            if (sudoku.getPossibleValues(row, colToClear).contains(num)) {
+                        if ((row < boxStartRow || row >= boxStartRow + 3) && sudoku.getPossibleValues(row, colToClear).contains(num)) {
                                 sudoku.removePossibleValue(row, colToClear, num);
                                 wasApplied = true;
                             }
-                        }
+
                     }
                 }
             }

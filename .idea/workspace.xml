@@ -4,12 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add Tests and improve some methods in Sudoku.java and SudokuPresenter.java">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Add .gitignore">
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR3Unittest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/134fc1295027b1d1b96c01ddb353c4122420ea12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d0548abde911a06a260f51e135136bd9ae40b34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24c4dc6cf30a28ef835f9f4bca2e799c17c50a03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/360397c6d81847010309c7c2bfe73afce7a7c1e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38c892ec4dc817ea62031f705dbbf7007d5a44d7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57c9f83109ab3e955b94662da53fdc384ce60504" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57c9f83109ab3e955b94662da53fdc384ce60504" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6944558a50f78fe9ea7b724cdf8ce92f3927024a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/7757a935056c02f7beb8d79313d472e43a95ef30" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/7757a935056c02f7beb8d79313d472e43a95ef30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86d1f4e33e6d17c3a0265a19f5c2d4e48a5689eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90bb6360bea3b52bc6de501c44d2b1c93941ca88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5e74bd18c5c774d58f6db3d82c5f69906ed2354" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c36e447998e86c7ec08b0256f002655a635e8e07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7cc008cbb03c7d0e423f58f2a8c4c569f2dec51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2e00ea5d22ca94862d652352dc50c5331352c51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e619261a5a4007b528f20d8ea540985af66c4724" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8805b9666d9b8b3bf71ba92f3887c756a12c979" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee24aba303a722162fb6ae8fa704d9c1eb9fdf17" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/3/134fc1295027b1d1b96c01ddb353c4122420ea12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/d/1d0548abde911a06a260f51e135136bd9ae40b34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/4/24c4dc6cf30a28ef835f9f4bca2e799c17c50a03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/6/360397c6d81847010309c7c2bfe73afce7a7c1e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/8/38c892ec4dc817ea62031f705dbbf7007d5a44d7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/6944558a50f78fe9ea7b724cdf8ce92f3927024a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/6/86d1f4e33e6d17c3a0265a19f5c2d4e48a5689eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/0/90bb6360bea3b52bc6de501c44d2b1c93941ca88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a5e74bd18c5c774d58f6db3d82c5f69906ed2354" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/3/c36e447998e86c7ec08b0256f002655a635e8e07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/7/c7cc008cbb03c7d0e423f58f2a8c4c569f2dec51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/2/e2e00ea5d22ca94862d652352dc50c5331352c51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/6/e619261a5a4007b528f20d8ea540985af66c4724" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/8/e8805b9666d9b8b3bf71ba92f3887c756a12c979" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/e/ee24aba303a722162fb6ae8fa704d9c1eb9fdf17" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/client/SudokuControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/client/SudokuControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/client/SudokuControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/client/SudokuPresenterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/deductionrules/DR2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/deductionrules/DR2Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/deductionrules/DR3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/deductionrules/DR3Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +101,11 @@
     "Application.SudokuPresenter.executor": "Run",
     "Application.SudokuReader.executor": "Run",
     "Application.SudokuWriter.executor": "Run",
+    "JUnit.DR2Test.executor": "Run",
+    "JUnit.DR3Test.executor": "Run",
+    "JUnit.DR3Unittest.executor": "Run",
+    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns.executor": "Run",
+    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldReturnTrue.executor": "Run",
     "JUnit.SudokuCheckerTest.executor": "Run",
     "JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage.executor": "Run",
     "JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1).executor": "Run",
@@ -99,92 +155,68 @@
       <recent name="fr.univcotedazur.softwareengineering.sudoku" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="SudokuCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SudokuFileLoaderTest">
+    <configuration name="All in SudokuSolver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SudokuSolver" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DR1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuSolver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.client.*" />
+          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.deductionrules.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.client" />
-      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.client.SudokuCheckerTest" />
+      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.deductionrules" />
+      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.deductionrules.DR1Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SudokuFileLoaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuSolver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.client.*" />
+          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.sudoku.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.client" />
-      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.client.SudokuCheckerTest" />
-      <option name="METHOD_NAME" value="updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SudokuSolver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.client" />
-      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.client.SudokuCheckerTest" />
-      <option name="METHOD_NAME" value="updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SudokuSolver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.client" />
-      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.client.SudokuControllerTest" />
+      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.sudoku" />
+      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.sudoku.SudokuFileLoaderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in SudokuSolver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SudokuSolver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.univcotedazur.softwareengineering.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.univcotedazur.softwareengineering.client" />
-      <option name="MAIN_CLASS_NAME" value="fr.univcotedazur.softwareengineering.client.SudokuControllerTest" />
-      <option name="METHOD_NAME" value="setCell_ValidValue_ShouldSetCellValue" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="softwareengineering in SudokuSolver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SudokuSolver" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/fr/univcotedazur/softwareengineering" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SudokuControllerTest" />
-        <item itemvalue="JUnit.SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue" />
-        <item itemvalue="JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage" />
-        <item itemvalue="JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1)" />
-        <item itemvalue="JUnit.SudokuCheckerTest" />
+        <item itemvalue="JUnit.SudokuFileLoaderTest" />
+        <item itemvalue="JUnit.DR1Test" />
+        <item itemvalue="JUnit.softwareengineering in SudokuSolver" />
+        <item itemvalue="JUnit.All in SudokuSolver" />
+        <item itemvalue="JUnit.java in SudokuSolver" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +246,8 @@
       <workItem from="1726345746461" duration="25000" />
       <workItem from="1726345788206" duration="88000" />
       <workItem from="1726678126474" duration="1450000" />
-      <workItem from="1726762655662" duration="13319000" />
+      <workItem from="1726762655662" duration="13488000" />
+      <workItem from="1726826147262" duration="3857000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -288,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726777973530</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add .gitignore">
+      <option name="closed" value="true" />
+      <created>1726778449435</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726778449435</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +345,8 @@
     <MESSAGE value="Add DR3 and improve the handling of invalid entries by clients" />
     <MESSAGE value="Fix mvn to create a .jar file" />
     <MESSAGE value="Add Tests and improve some methods in Sudoku.java and SudokuPresenter.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Tests and improve some methods in Sudoku.java and SudokuPresenter.java" />
+    <MESSAGE value="Add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sudoku_solver$SudokuTest.ic" NAME="SudokuTest Coverage Results" MODIFIED="1726775110455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

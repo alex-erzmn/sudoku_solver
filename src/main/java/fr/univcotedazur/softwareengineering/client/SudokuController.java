@@ -21,8 +21,8 @@ import java.util.List;
  */
 public class SudokuController {
     private final SudokuFactory sudokuFactory;
-    private DeductionRuleFactory ruleFactory;
-    private final List<DeductionRule> deductionRules;
+    private final DeductionRuleFactory ruleFactory;
+    private List<DeductionRule> deductionRules;
     @Getter
     private Sudoku sudoku;
     @Getter
@@ -31,7 +31,6 @@ public class SudokuController {
     public SudokuController() {
         sudokuFactory = SudokuFactory.getInstance();
         ruleFactory = DeductionRuleFactory.getInstance();
-        deductionRules = ruleFactory.createAllDeductionRules();
         currentRuleName = "None";
     }
 
@@ -56,6 +55,7 @@ public class SudokuController {
     }
 
     public List<String> getDeductionRules() {
+        deductionRules = ruleFactory.createAllDeductionRules();
         List<String> ruleNames = new ArrayList<>();
         for (DeductionRule rule : deductionRules) {
             ruleNames.add(rule.getName());

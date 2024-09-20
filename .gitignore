@@ -5,8 +5,16 @@
 # Compiled class file
 *.class
 
-# Log file
+# IntelliJ IDEA project files
+.idea/
+
+# Maven/Gradle build directories
+build/
+
+# Logs, temp files, etc.
 *.log
+*.tmp
+*.swp
 
 # BlueJ files
 *.ctxt

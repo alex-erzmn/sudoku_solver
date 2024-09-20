@@ -61,6 +61,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     private Button solveButton;
     private static final String FONT = "SansSerif";
     private static final String BUTTONSTYLE = "-fx-background-color: #007BFF; -fx-text-fill: white;";
+    private static final String NO_RULE = "Current Rule: None";
 
     @Override
     public void start(Stage primaryStage) {
@@ -154,7 +155,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         mainLayout.setRight(controlPanel);
 
         // Rule Label
-        ruleLabel = new Label("Current Rule: None");
+        ruleLabel = new Label(NO_RULE);
         ruleLabel.setFont(Font.font(FONT, 18));
         ruleLabel.setTextFill(Color.web("#333333"));
         mainLayout.setTop(ruleLabel);
@@ -173,11 +174,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     }
 
     private void toggleMute() {
-        if (mediaPlayer.isMute()) {
-            mediaPlayer.setMute(false);
-        } else {
-            mediaPlayer.setMute(true);
-        }
+        mediaPlayer.setMute(!mediaPlayer.isMute());
     }
 
 
@@ -192,7 +189,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
             sudoku.addObserver(sudokuChecker);
             sudoku.addObserver(this);
             updateSudoku(sudoku);
-            ruleLabel.setText("Current Rule: None");
+            ruleLabel.setText(NO_RULE);
             updateRuleList();
 
             for (int row = 0; row < SIZE; row++) {
@@ -239,7 +236,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
                 if (value >= 1 && value <= 9) {
                     controller.setCell(row, col, value);
                     updateSudoku(controller.getSudoku());
-                    ruleLabel.setText("Current Rule: None");
+                    ruleLabel.setText(NO_RULE);
                     currentRuleName = "None";
                     updateRuleList();
                 } else {

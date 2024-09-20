@@ -3,7 +3,6 @@ package fr.univcotedazur.softwareengineering.sudoku;
 import fr.univcotedazur.softwareengineering.client.DisplayObserver;
 import fr.univcotedazur.softwareengineering.client.SudokuObserver;
 import fr.univcotedazur.softwareengineering.sudoku.components.Box;
-import fr.univcotedazur.softwareengineering.sudoku.components.Cell;
 import fr.univcotedazur.softwareengineering.sudoku.components.Column;
 import fr.univcotedazur.softwareengineering.sudoku.components.Row;
 import lombok.Getter;

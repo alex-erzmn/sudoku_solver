@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class SudokuTest {
+class SudokuTest {
 
     private TestSudokuFactory testSudokuFactory;
 
@@ -22,7 +22,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void getValueTest() {
+    void getValueTest() {
         //arrange
         Sudoku emptySudoku = testSudokuFactory.createEmptySudoku();
         Sudoku easySudoku = testSudokuFactory.createEasySudoku();
@@ -40,7 +40,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void setValueTest() {
+    void setValueTest() {
         //arrange
         Sudoku emptySudoku = testSudokuFactory.createEmptySudoku();
         Sudoku easySudoku = testSudokuFactory.createEasySudoku();
@@ -58,7 +58,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void getPossibleValuesTest() {
+    void getPossibleValuesTest() {
         //arrange
         Sudoku emptySudoku = testSudokuFactory.createEmptySudoku();
         Sudoku easySudoku = testSudokuFactory.createEasySudoku();
@@ -80,7 +80,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void initializePossibleValuesTest() {
+    void initializePossibleValuesTest() {
         //arrange
         Sudoku easySudoku = testSudokuFactory.createEasySudokuWithoutPossibleValues();
 
@@ -101,7 +101,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void addPossibleValuesTest() {
+    void addPossibleValuesTest() {
         // arrange
         Sudoku easySudoku = testSudokuFactory.createEasySudoku();
         Set<Integer> initialPossibleValues = new HashSet<>(easySudoku.getPossibleValues(0, 2));
@@ -116,7 +116,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void removePossibleValueTest() {
+    void removePossibleValueTest() {
         // arrange
         Sudoku easySudoku = testSudokuFactory.createEasySudoku();
         easySudoku.addPossibleValue(0, 2, 1); // Stelle sicher, dass der Wert hinzugefügt wurde
@@ -132,7 +132,7 @@ public class SudokuTest {
     }
 
     @Test
-    public void isSolvedTest() {
+    void isSolvedTest() {
         // arrange
         Sudoku emptySudoku = testSudokuFactory.createEmptySudoku();
         Sudoku hardSudoku = testSudokuFactory.createHardSudoku();

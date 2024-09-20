@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-public class DR1Test {
+class DR1Test {
 
     private DR1 dr1;
     private TestSudokuFactory testSudokuFactory;
 
     @Test
-    public void runTest_Successful() {
+    void runTest_Successful() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createEasySudoku();
@@ -30,7 +30,7 @@ public class DR1Test {
     }
 
     @Test
-    public void runTest_Failure() {
+    void runTest_Failure() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createHardSudoku();

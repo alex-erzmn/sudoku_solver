@@ -14,7 +14,7 @@ import static org.mockito.Mockito.*;
  * Tests for the Box-Line Reduction deduction rule.
  * Example for a unit test using Mockito.
  */
-class DR3Unittest {
+class DR3UnitTest {
 
     private DR3 dr3;
     private Sudoku sudoku;
@@ -26,7 +26,7 @@ class DR3Unittest {
     }
 
     @Test
-    public void testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns() {
+    void testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns() {
         // Arrange
         Set<Integer> possibleValuesInBlock = new HashSet<>();
         possibleValuesInBlock.add(3);
@@ -65,7 +65,7 @@ class DR3Unittest {
 
 
     @Test
-    public void testRun_WithNoBoxLineReduction_ShouldReturnFalse() {
+    void testRun_WithNoBoxLineReduction_ShouldReturnFalse() {
         // Arrange
         Set<Integer> possibleValues = new HashSet<>();
         possibleValues.add(5);

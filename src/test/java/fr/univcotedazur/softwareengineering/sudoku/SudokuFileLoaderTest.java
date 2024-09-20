@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * readSudokuFromFile method.
  * @see SudokuFileLoader
  */
-public class SudokuFileLoaderTest {
+class SudokuFileLoaderTest {
 
     @Test
-    public void getFilePathForDifficultyTest() {
+    void getFilePathForDifficultyTest() {
         // Arrange
         SudokuFileLoader sudokuFileLoader = SudokuFileLoader.getInstance();
 
@@ -27,7 +27,7 @@ public class SudokuFileLoaderTest {
     }
 
     @Test
-    public void readSudokuFromFileTest_Successful() throws IOException {
+    void readSudokuFromFileTest_Successful() throws IOException {
         // arrange
         SudokuFileLoader sudokuFileLoader = SudokuFileLoader.getInstance();
         String filePath = "testdata/testdata_correct.txt";
@@ -137,7 +137,7 @@ public class SudokuFileLoaderTest {
     }
 
     @Test
-    public void readSudokuFromFileTest_FailureInvalidLineFormat() {
+    void readSudokuFromFileTest_FailureInvalidLineFormat() {
         // arrange
         SudokuFileLoader sudokuFileLoader = SudokuFileLoader.getInstance();
         String filePath = "testdata/testdata_invalidLineFormat.txt";
@@ -152,7 +152,7 @@ public class SudokuFileLoaderTest {
     }
 
     @Test
-    public void readSudokuFromFileTest_FailureInvalidNumberFormat() {
+    void readSudokuFromFileTest_FailureInvalidNumberFormat() {
         // arrange
         SudokuFileLoader sudokuFileLoader = SudokuFileLoader.getInstance();
         String filePath = "testdata/testdata_invalidNumberFormat.txt";
@@ -167,7 +167,7 @@ public class SudokuFileLoaderTest {
     }
 
     @Test
-    public void readSudokuFromFileTest_FailureEmptyFile() {
+    void readSudokuFromFileTest_FailureEmptyFile() {
         // arrange
         SudokuFileLoader sudokuFileLoader = SudokuFileLoader.getInstance();
         String filePath = "testdata/testdata_empty.txt";

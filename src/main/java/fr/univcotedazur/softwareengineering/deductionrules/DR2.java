@@ -9,7 +9,6 @@ import java.util.Set;
  * possible value. In comparison to the Naked Single strategy, the possible value is not the only possible value
  * in the cell, but it is the only possible value in the row, column or box.
  */
-//TODO: Understand this!
 public class DR2 implements DeductionRule {
 
     private static final String NAME = "Hidden Single";

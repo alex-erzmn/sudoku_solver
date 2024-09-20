@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DR3Test {
+class DR3Test {
 
     private DR3 dr3;
     private TestSudokuFactory testSudokuFactory;
 
     @Test
-    public void runTest_Successful_Easy() {
+    void runTest_Successful_Easy() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createEasySudoku();
@@ -27,7 +27,7 @@ public class DR3Test {
     }
 
     @Test
-    public void runTest_Successful_Hard() {
+    void runTest_Successful_Hard() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createHardSudoku();
@@ -41,7 +41,7 @@ public class DR3Test {
     }
 
     @Test
-    public void runTest_Failure() {
+    void runTest_Failure() {
         //arrange
         testSudokuFactory = TestSudokuFactory.getInstance();
         Sudoku testSudoku = testSudokuFactory.createEmptySudoku();

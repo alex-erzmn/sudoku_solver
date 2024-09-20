@@ -482,3 +482,15 @@ G.idea/sonarlint/issuestore/a/0/a023d65f0d6d07c33ec2a025e3b19ad98825625d,8\0\80
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 ‚
 Rsrc/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR3Unittest.java,a\5\a51dea249bec98193e00caf4a7f75af2b25c628c
+z
+Jsrc/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR2.java,0\d\0d3c53223d01cc8ec04d22e651c6b789d6de2469
+„
+Tsrc/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRule.java,a\4\a4c18dccaf67a5d3be476f9a6f78a320f18e3661
+y
+Isrc/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuType.java,6\3\63b80f5b3cc48442c524c656c22645c168525e50
+=
+How-To-Run.md,a\d\ad87963c1c1a6ebfdfbaf68bef56f84e393a8029
+z
+Jsrc/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java,f\a\fa4bc3f3aa4abd6cd34361cd81724d011d367577
+‚
+Rsrc/test/java/fr/univcotedazur/softwareengineering/deductionrules/DR3UnitTest.java,a\4\a4e757ed27bb9a6b9b54e201e555c7a6c640fed1

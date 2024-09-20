@@ -1,9 +1,5 @@
 
-œ
-java:S1192"SDefine a constant instead of duplicating this literal "Current Rule: None" 3 times.(üõ‹ëüÿÿÿÿ8½¡Ùİ 2J$f4c13eb4-4370-4c15-9470-111c25c2cf87
-†
-java:S1126°"BReplace this if-then-else statement by a single method invocation.(êŠ¶ç8Ø¡Ùİ 2J$756b3d48-88ae-4163-aaf2-ee9eaca1df20
 m
-java:S2140³")Use "java.util.Random.nextInt()" instead.(Ô–²ß8ã¡Ùİ 2J$6493c1db-6b7f-4410-93a9-6c93d4f71e43
+java:S2140°")Use "java.util.Random.nextInt()" instead.(Ô–²ß8İ«Ùú 2J$faa2a2dc-b797-45ef-8aac-39ca87691a2a
 r
-java:S2140´")Use "java.util.Random.nextInt()" instead.(œßµôúÿÿÿÿ8ã¡Ùİ 2J$41b63721-45ea-4573-8c8a-46a036e738ca
+java:S2140±")Use "java.util.Random.nextInt()" instead.(œßµôúÿÿÿÿ8İ«Ùú 2J$c3dea37b-1bc3-4d4c-a220-3c0db30fcb1a

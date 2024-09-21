@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Fix SonarLint issues.">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +208,7 @@
       <workItem from="1726678126474" duration="1450000" />
       <workItem from="1726762655662" duration="13488000" />
       <workItem from="1726826147262" duration="3857000" />
-      <workItem from="1726905463329" duration="3148000" />
+      <workItem from="1726905463329" duration="3824000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -326,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726834260411</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update README.md">
+      <option name="closed" value="true" />
+      <created>1726908960045</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726908960045</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +342,8 @@
     <MESSAGE value="Small corrections in SudokuController.java" />
     <MESSAGE value="Small test corrections." />
     <MESSAGE value="Fix SonarLint issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix SonarLint issues." />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -298,23 +298,18 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     }
 
     private void startCellBlinking() {
-        // Timeline für das Blinken erstellen
-        blinkTimeline = new Timeline(new KeyFrame(Duration.seconds(0.5), event -> {
-            // Eine zufällige Zelle auswählen
+        blinkTimeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             int row = (int) (Math.random() * SIZE);
             int col = (int) (Math.random() * SIZE);
             Button cell = cells[row][col];
 
-            // Zelle hervorheben
-            cell.setStyle("-fx-background-color: #007BFF;"); // Goldene Farbe zum Hervorheben
+            cell.setStyle("-fx-background-color: #007BFF;");
 
-            // Rücksetzung nach kurzer Zeit
-            PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+            PauseTransition pause = new PauseTransition(Duration.seconds(1));
             pause.setOnFinished(e -> cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;"));
             pause.play();
         }));
 
-        // Die Timeline kontinuierlich ablaufen lassen
         blinkTimeline.setCycleCount(Animation.INDEFINITE);
         blinkTimeline.play();
     }

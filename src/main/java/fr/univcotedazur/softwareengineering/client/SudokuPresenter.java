@@ -29,6 +29,7 @@ import lombok.Getter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -60,201 +61,25 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     @Getter
     private Button solveButton;
     private static final String FONT = "SansSerif";
-    private static final String BUTTONSTYLE = "-fx-background-color: #007BFF; -fx-text-fill: white;";
-    private static final String NO_RULE = "Current Rule: None";
+    private static final String BUTTON_STYLE = "-fx-background-color: #007BFF; -fx-text-fill: white;";
+    private static final String RULE_HEADER = "Current Rule: ";
 
     @Override
     public void start(Stage primaryStage) {
-        String musicFile = getClass().getResource("/audio/please-calm-my-mind.mp3").toExternalForm();
+        String musicFile = Objects.requireNonNull(getClass().getResource("/audio/please-calm-my-mind.mp3")).toExternalForm();
         Media media = new Media(musicFile);
         mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // Schleife die Musik
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         mediaPlayer.play();
 
         primaryStage.getIcons().add(new Image("/images/sudoku.png"));
         primaryStage.setTitle("Sudoku Solver");
         sceneManager = new SceneManager(primaryStage);
-        sceneManager.setStartScene(createStartScene()); // Set the start scene
-        sceneManager.setGameScene(createGameScene());   // Set the game scene
-        sceneManager.showStartScene();// Show the start scene
+        sceneManager.setStartScene(createStartScene());
+        sceneManager.setGameScene(createGameScene());
+        sceneManager.showStartScene();
 
         startCellBlinking();
-    }
-
-    private Scene createStartScene() {
-        VBox startLayout = new VBox(20);
-        startLayout.setAlignment(Pos.CENTER);
-        startLayout.setPadding(new Insets(20));
-        startLayout.setBackground(new Background(new BackgroundFill(Color.web("#F5F5F5"), CornerRadii.EMPTY, Insets.EMPTY)));
-
-        Label title = new Label("Sudoku Solver");
-        title.setFont(Font.font(FONT, 36));
-        title.setTextFill(Color.web("#333333"));
-
-        startButton = new Button("Start");
-        startButton.setStyle(BUTTONSTYLE);
-        startButton.setOnAction(event -> sceneManager.showGameScene()); // Show game scene on button click
-
-        startLayout.getChildren().addAll(title, startButton);
-        return new Scene(startLayout, 1000, 800);
-    }
-
-    private Scene createGameScene() {
-        controller = new SudokuController(); // Assuming this is how you initialize it
-
-        // Initialize the cells array
-        cells = new Button[SIZE][SIZE];
-
-        // Main layout
-        BorderPane mainLayout = new BorderPane();
-        mainLayout.setPadding(new Insets(10));
-        mainLayout.setBackground(new Background(new BackgroundFill(Color.web("#F5F5F5"), CornerRadii.EMPTY, Insets.EMPTY)));
-
-        // Sudoku Board Panel
-        GridPane boardPanel = new GridPane();
-        boardPanel.setHgap(5);
-        boardPanel.setVgap(5);
-        boardPanel.setPadding(new Insets(10));
-        for (int row = 0; row < SIZE; row++) {
-            for (int col = 0; col < SIZE; col++) {
-                Button cell = new Button("");
-                cell.setFont(Font.font(FONT, 24)); // Optional: larger font size
-                cell.setPrefSize(80, 80); // Larger cells
-                cell.setAlignment(Pos.CENTER);
-                cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;");
-                cells[row][col] = cell;
-                boardPanel.add(cell, col, row);
-            }
-        }
-        mainLayout.setCenter(boardPanel);
-
-        // Control Panel
-        VBox controlPanel = new VBox(10);
-        controlPanel.setPadding(new Insets(10));
-        controlPanel.setAlignment(Pos.TOP_LEFT);
-        controlPanel.setStyle("-fx-background-color: #F0F0F0;");
-
-        createSudokuButton = new Button("Create Sudoku");
-        createSudokuButton.setStyle(BUTTONSTYLE);
-        createSudokuButton.setOnAction(event -> createSudoku());
-
-        solveButton = new Button("Solve");
-        solveButton.setStyle(BUTTONSTYLE);
-        solveButton.setOnAction(event -> solveStep());
-        solveButton.setDisable(true);
-
-        difficultyComboBox = new ComboBox<>(FXCollections.observableArrayList(SudokuType.values()));
-        difficultyComboBox.setValue(SudokuType.RANDOM);
-        difficultyComboBox.setTooltip(new Tooltip("Select the difficulty level of the Sudoku"));
-
-        ruleListModel = FXCollections.observableArrayList();
-        ruleList = new ListView<>(ruleListModel);
-        ruleList.setPrefHeight(200);
-
-        controlPanel.getChildren().addAll(createSudokuButton, difficultyComboBox, solveButton, ruleList);
-        mainLayout.setRight(controlPanel);
-
-        // Rule Label
-        ruleLabel = new Label(NO_RULE);
-        ruleLabel.setFont(Font.font(FONT, 18));
-        ruleLabel.setTextFill(Color.web("#333333"));
-        mainLayout.setTop(ruleLabel);
-
-        // Mute-Button erstellen
-        muteButton = new Button("Mute");
-        muteButton.setStyle(BUTTONSTYLE);
-        muteButton.setOnAction(event -> toggleMute());
-
-        // Hinzufügen des Mute-Buttons in die oberste rechte Ecke
-        HBox topRightControls = new HBox(muteButton);
-        topRightControls.setAlignment(Pos.TOP_RIGHT);
-        mainLayout.setTop(new VBox(ruleLabel, topRightControls));
-
-        return new Scene(mainLayout, 1000, 800);
-    }
-
-    private void toggleMute() {
-        mediaPlayer.setMute(!mediaPlayer.isMute());
-    }
-
-
-    private void createSudoku() {
-        SudokuType selectedType = difficultyComboBox.getValue();
-        try {
-            if (blinkTimeline != null) {
-                blinkTimeline.stop();
-            }
-            Sudoku sudoku = controller.createSudoku(selectedType);
-            SudokuChecker sudokuChecker = new SudokuChecker(this);
-            sudoku.addObserver(sudokuChecker);
-            sudoku.addObserver(this);
-            updateSudoku(sudoku);
-            ruleLabel.setText(NO_RULE);
-            updateRuleList();
-
-            for (int row = 0; row < SIZE; row++) {
-                for (int col = 0; col < SIZE; col++) {
-                    if(sudoku.getValue(row, col) == 0) {
-                        int finalRow = row;
-                        int finalCol = col;
-                        cells[row][col].setOnAction(event -> cellClicked(finalRow, finalCol));
-                    }
-                    cells[row][col].setDisable(false);
-                }
-            }
-
-            solveButton.setDisable(false);
-        } catch (IOException ex) {
-            sceneManager.showError("Error creating Sudoku: " + ex.getMessage());
-        }
-    }
-
-    private void solveStep() {
-        String ruleName = controller.solve();
-        if (ruleName != null) {
-            ruleLabel.setText("Current Rule: " + ruleName);
-            currentRuleName = ruleName;
-            updateRuleList();
-            if (controller.getSudoku().isSolved()) {
-                sceneManager.showInfo("Sudoku solved!");
-            }
-        } else {
-            sceneManager.showWarning("The Sudoku cannot be solved by the Deduction Rules. Please fill any cell.");
-        }
-    }
-
-    private void cellClicked(int row, int col) {
-        TextInputDialog dialog = new TextInputDialog();
-        dialog.setTitle("Manual Input");
-        dialog.setHeaderText("Enter the value (1-9) for the cell (" + (row + 1) + ", " + (col + 1) + "):");
-        dialog.setContentText("Value:");
-
-        String input = dialog.showAndWait().orElse("");
-        if (!input.trim().isEmpty()) {
-            try {
-                int value = Integer.parseInt(input);
-                if (value >= 1 && value <= 9) {
-                    controller.setCell(row, col, value);
-                    updateSudoku(controller.getSudoku());
-                    ruleLabel.setText(NO_RULE);
-                    currentRuleName = "None";
-                    updateRuleList();
-                } else {
-                    sceneManager.showError("Invalid value. The value must be between 1 and 9.");
-                }
-            } catch (NumberFormatException ex) {
-                sceneManager.showError("Invalid entry. Please enter a valid number.");
-            }
-        }
-    }
-
-
-
-    private void updateRuleList() {
-        ruleListModel.setAll(controller.getDeductionRules());
-        if (currentRuleName != null) {
-            ruleList.getSelectionModel().select(currentRuleName);
-        }
     }
 
     @Override
@@ -279,6 +104,174 @@ public class SudokuPresenter extends Application implements DisplayObserver {
                     cells[row][col].setTextFill(Color.BLACK);
                 }
             }
+        }
+    }
+
+    private Scene createStartScene() {
+        VBox startLayout = new VBox(20);
+        startLayout.setAlignment(Pos.CENTER);
+        startLayout.setPadding(new Insets(20));
+        startLayout.setBackground(new Background(new BackgroundFill(Color.web("#F5F5F5"), CornerRadii.EMPTY, Insets.EMPTY)));
+
+        Label title = new Label("Sudoku Solver");
+        title.setFont(Font.font(FONT, 36));
+        title.setTextFill(Color.web("#333333"));
+
+        startButton = new Button("Start");
+        startButton.setStyle(BUTTON_STYLE);
+        startButton.setOnAction(event -> sceneManager.showGameScene());
+
+        startLayout.getChildren().addAll(title, startButton);
+        return new Scene(startLayout, 1000, 800);
+    }
+
+    private Scene createGameScene() {
+        controller = new SudokuController();
+
+        cells = new Button[SIZE][SIZE];
+
+        BorderPane mainLayout = new BorderPane();
+        mainLayout.setPadding(new Insets(10));
+        mainLayout.setBackground(new Background(new BackgroundFill(Color.web("#F5F5F5"), CornerRadii.EMPTY, Insets.EMPTY)));
+
+        GridPane boardPanel = new GridPane();
+        boardPanel.setHgap(5);
+        boardPanel.setVgap(5);
+        boardPanel.setPadding(new Insets(10));
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                Button cell = new Button("");
+                cell.setFont(Font.font(FONT, 24));
+                cell.setPrefSize(80, 80);
+                cell.setAlignment(Pos.CENTER);
+                cell.setStyle("-fx-background-color: #F0F8FF; -fx-border-color: #B4B4B4;");
+                cells[row][col] = cell;
+                boardPanel.add(cell, col, row);
+            }
+        }
+        mainLayout.setCenter(boardPanel);
+
+        VBox controlPanel = new VBox(10);
+        controlPanel.setPadding(new Insets(10));
+        controlPanel.setAlignment(Pos.TOP_LEFT);
+        controlPanel.setStyle("-fx-background-color: #F0F0F0;");
+
+        createSudokuButton = new Button("Create Sudoku");
+        createSudokuButton.setStyle(BUTTON_STYLE);
+        createSudokuButton.setOnAction(event -> createSudoku());
+
+        solveButton = new Button("Solve");
+        solveButton.setStyle(BUTTON_STYLE);
+        solveButton.setOnAction(event -> solveStep());
+        solveButton.setDisable(true);
+
+        difficultyComboBox = new ComboBox<>(FXCollections.observableArrayList(SudokuType.values()));
+        difficultyComboBox.setValue(SudokuType.RANDOM);
+        difficultyComboBox.setTooltip(new Tooltip("Select the difficulty level of the Sudoku"));
+
+        ruleListModel = FXCollections.observableArrayList();
+        ruleList = new ListView<>(ruleListModel);
+        ruleList.setPrefHeight(200);
+
+        controlPanel.getChildren().addAll(createSudokuButton, difficultyComboBox, solveButton, ruleList);
+        mainLayout.setRight(controlPanel);
+
+        currentRuleName = "None";
+        ruleLabel = new Label(RULE_HEADER + currentRuleName);
+        ruleLabel.setFont(Font.font(FONT, 18));
+        ruleLabel.setTextFill(Color.web("#333333"));
+        mainLayout.setTop(ruleLabel);
+
+        muteButton = new Button("Mute");
+        muteButton.setStyle(BUTTON_STYLE);
+        muteButton.setOnAction(event -> toggleMute());
+
+        HBox topRightControls = new HBox(muteButton);
+        topRightControls.setAlignment(Pos.TOP_RIGHT);
+        mainLayout.setTop(new VBox(ruleLabel, topRightControls));
+
+        return new Scene(mainLayout, 1000, 800);
+    }
+
+    private void createSudoku() {
+        SudokuType selectedType = difficultyComboBox.getValue();
+        try {
+            if (blinkTimeline != null) {
+                blinkTimeline.stop();
+            }
+            Sudoku sudoku = controller.createSudoku(selectedType);
+            SudokuChecker sudokuChecker = new SudokuChecker(this);
+            sudoku.addObserver(sudokuChecker);
+            sudoku.addObserver(this);
+            updateSudoku(sudoku);
+            currentRuleName = "None";
+            ruleLabel.setText(RULE_HEADER + currentRuleName);
+            updateRuleList();
+
+            for (int row = 0; row < SIZE; row++) {
+                for (int col = 0; col < SIZE; col++) {
+                    if(sudoku.getValue(row, col) == 0) {
+                        int finalRow = row;
+                        int finalCol = col;
+                        cells[row][col].setOnAction(event -> cellClicked(finalRow, finalCol));
+                    }
+                    cells[row][col].setDisable(false);
+                }
+            }
+
+            solveButton.setDisable(false);
+        } catch (IOException ex) {
+            sceneManager.showError("Error creating Sudoku: " + ex.getMessage());
+        }
+    }
+
+    private void solveStep() {
+        String ruleName = controller.solve();
+        if (ruleName != null) {
+            ruleLabel.setText(RULE_HEADER + ruleName);
+            currentRuleName = ruleName;
+            updateRuleList();
+            if (controller.getSudoku().isSolved()) {
+                sceneManager.showInfo("Sudoku solved!");
+            }
+        } else {
+            sceneManager.showWarning("The Sudoku cannot be solved by the Deduction Rules. Please fill any cell.");
+        }
+    }
+
+    private void toggleMute() {
+        mediaPlayer.setMute(!mediaPlayer.isMute());
+    }
+
+    private void cellClicked(int row, int col) {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Manual Input");
+        dialog.setHeaderText("Enter the value (1-9) for the cell (" + (row + 1) + ", " + (col + 1) + "):");
+        dialog.setContentText("Value:");
+
+        String input = dialog.showAndWait().orElse("");
+        if (!input.trim().isEmpty()) {
+            try {
+                int value = Integer.parseInt(input);
+                if (value >= 1 && value <= 9) {
+                    controller.setCell(row, col, value);
+                    updateSudoku(controller.getSudoku());
+                    currentRuleName = "None";
+                    ruleLabel.setText(RULE_HEADER + currentRuleName);
+                    updateRuleList();
+                } else {
+                    sceneManager.showError("Invalid value. The value must be between 1 and 9.");
+                }
+            } catch (NumberFormatException ex) {
+                sceneManager.showError("Invalid entry. Please enter a valid number.");
+            }
+        }
+    }
+
+    private void updateRuleList() {
+        ruleListModel.setAll(controller.getDeductionRules());
+        if (currentRuleName != null) {
+            ruleList.getSelectionModel().select(currentRuleName);
         }
     }
 

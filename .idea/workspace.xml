@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Update README.md">
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Update cellBlinking to 1sec.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
     </list>
@@ -40,56 +40,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.SudokuGUI.executor": "Run",
-    "Application.SudokuPresenter.executor": "Run",
-    "Application.SudokuReader.executor": "Run",
-    "Application.SudokuWriter.executor": "Run",
-    "JUnit.DR2Test.executor": "Run",
-    "JUnit.DR3Test.executor": "Run",
-    "JUnit.DR3Unittest.executor": "Run",
-    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns.executor": "Run",
-    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldReturnTrue.executor": "Run",
-    "JUnit.SudokuCheckerTest.executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage.executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1).executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage.executor": "Run",
-    "JUnit.SudokuControllerTest.executor": "Run",
-    "JUnit.SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.readSudokuFromFileTest.executor": "Coverage",
-    "JUnit.SudokuFileLoaderTest.readSudokuFromFileTest_Successful.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.testGetFilePathForDifficulty.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.testReadFromCacheOnlyOnce.executor": "Run",
-    "JUnit.SudokuTest.addPossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.executor": "Coverage",
-    "JUnit.SudokuTest.getPossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.getValueTest.executor": "Run",
-    "JUnit.SudokuTest.initializePossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.isSolvedTest.executor": "Run",
-    "JUnit.SudokuTest.removePossibleValueTest.executor": "Run",
-    "JUnit.SudokuTest.testSetValue.executor": "Run",
-    "JUnit.java in SudokuSolver.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alles/IdeaProjects/sudoku_solver",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuWriter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR2Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldReturnTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.readSudokuFromFileTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.readSudokuFromFileTest_Successful.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.testGetFilePathForDifficulty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.testReadFromCacheOnlyOnce.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.addPossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SudokuTest.getPossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.getValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.initializePossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.isSolvedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.removePossibleValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.testSetValue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in SudokuSolver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alles/IdeaProjects/sudoku_solver&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\main\resources\testdata" />
@@ -208,7 +208,8 @@
       <workItem from="1726678126474" duration="1450000" />
       <workItem from="1726762655662" duration="13488000" />
       <workItem from="1726826147262" duration="3857000" />
-      <workItem from="1726905463329" duration="3824000" />
+      <workItem from="1726905463329" duration="3984000" />
+      <workItem from="1726915698645" duration="959000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -322,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726908960045</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update cellBlinking to 1sec.">
+      <option name="closed" value="true" />
+      <created>1726909721008</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726909721008</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +352,8 @@
     <MESSAGE value="Small test corrections." />
     <MESSAGE value="Fix SonarLint issues." />
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Update cellBlinking to 1sec." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update cellBlinking to 1sec." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

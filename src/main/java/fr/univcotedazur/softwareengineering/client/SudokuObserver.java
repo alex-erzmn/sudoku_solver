@@ -3,7 +3,7 @@ package fr.univcotedazur.softwareengineering.client;
 import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 
 /**
- * Interface for the sudoku observer
+ * Interface to observe a sudoku
  * @implNote Observer pattern
  */
 public interface SudokuObserver {

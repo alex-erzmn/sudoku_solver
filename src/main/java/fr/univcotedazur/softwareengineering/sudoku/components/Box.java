@@ -3,7 +3,7 @@ package fr.univcotedazur.softwareengineering.sudoku.components;
 import java.util.List;
 
 public class Box implements RowColumnBox {
-    private Cell[] cells;
+    private final Cell[] cells;
 
     public Box() {
         cells = new Cell[9];

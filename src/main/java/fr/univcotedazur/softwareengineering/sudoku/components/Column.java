@@ -1,14 +1,16 @@
 package fr.univcotedazur.softwareengineering.sudoku.components;
 
+import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
+
 import java.util.List;
 
 public class Column implements RowColumnBox {
-    private Cell[] cells;
+    private final Cell[] cells;
 
     public Column() {
         cells = new Cell[9];
         for (int i = 0; i < 9; i++) {
-            cells[i] = new Cell(0); // Standardmäßig alle Zellen leer und nicht initialisiert
+            cells[i] = new Cell(0);
         }
     }
 

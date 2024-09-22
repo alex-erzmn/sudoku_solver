@@ -46,15 +46,11 @@ public class DR1 implements DeductionRule {
         return wasApplied;
     }
 
-    private static class CellPosition {
-        final int row;
-        final int col;
-        final int value;
-
-        CellPosition(int row, int col, int value) {
-            this.row = row;
-            this.col = col;
-            this.value = value;
-        }
+    /**
+     * Helper class to store the position and value of a cell. A record is used to store the cell position and value.
+     * A record class is immutable and provides a couple of useful methods like equals(), hashCode() and toString().
+     * The records attributes are final and can be accessed using the getter methods.
+     */
+    private record CellPosition(int row, int col, int value) {
     }
 }

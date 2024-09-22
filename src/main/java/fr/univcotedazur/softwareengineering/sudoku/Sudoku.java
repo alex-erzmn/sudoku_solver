@@ -44,24 +44,17 @@ public class Sudoku {
         observers.add(observer);
     }
 
-    private void notifyObservers() {
-        for (SudokuObserver observer : observers) {
-            observer.updateSudoku(this);
-        }
-    }
-
-    private void notifyDisplayObservers() {
-        for (SudokuObserver observer : observers) {
-            if (observer instanceof DisplayObserver) {
-                observer.updateSudoku(this);
-            }
-        }
-    }
-
     public int getValue(int rowIndex, int colIndex) {
         return rows[rowIndex].getValue(colIndex);
     }
 
+    /**
+     * Sets the value of a cell in the Sudoku grid.
+     * @param rowIndex the row index of the cell
+     * @param colIndex the column index of the cell
+     * @param value the value to set
+     * @implNote You should only set the value of a cell using this method to make sure the Sudoku is updated correctly.
+     */
     public void setValue(int rowIndex, int colIndex, int value) {
         if(getValue(rowIndex, colIndex) != 0) {
             return;
@@ -73,17 +66,33 @@ public class Sudoku {
         notifyObservers();
     }
 
-
-    private int getBoxIndex(int rowIndex, int colIndex) {
-        return (rowIndex / 3) * 3 + (colIndex / 3);
-    }
-
-    private int getCellIndexInBox(int rowIndex, int colIndex) {
-        return (rowIndex % 3) * 3 + (colIndex % 3);
+    public boolean isSolved() {
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                if (getValue(row, col) == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public Set<Integer> getPossibleValues(int rowIndex, int colIndex) {
         return rows[rowIndex].getCell(colIndex).getPossibleValues();
+    }
+
+    /**
+     * Removes a possible value from a cell in the Sudoku grid.
+     * @param rowIndex the row index of the cell
+     * @param colIndex the column index of the cell
+     * @param value the value to remove
+     * @implNote You should only remove a possible value from a cell using this method to make sure the Sudoku is updated correctly.
+     */
+    public void removePossibleValue(int rowIndex, int colIndex, int value) {
+        rows[rowIndex].getCell(colIndex).removePossibleValue(value);
+        columns[colIndex].getCell(rowIndex).removePossibleValue(value);
+        boxes[getBoxIndex(rowIndex, colIndex)].getCell(getCellIndexInBox(rowIndex, colIndex)).removePossibleValue(value);
+        notifyDisplayObservers();
     }
 
     public void initializePossibleValues() {
@@ -113,17 +122,10 @@ public class Sudoku {
         return possibleValues;
     }
 
-    public void addPossibleValue(int rowIndex, int colIndex, int value) {
+    protected void addPossibleValue(int rowIndex, int colIndex, int value) {
         rows[rowIndex].getCell(colIndex).addPossibleValue(value);
         columns[colIndex].getCell(rowIndex).addPossibleValue(value);
         boxes[getBoxIndex(rowIndex, colIndex)].getCell(getCellIndexInBox(rowIndex, colIndex)).addPossibleValue(value);
-    }
-
-    public void removePossibleValue(int rowIndex, int colIndex, int value) {
-        rows[rowIndex].getCell(colIndex).removePossibleValue(value);
-        columns[colIndex].getCell(rowIndex).removePossibleValue(value);
-        boxes[getBoxIndex(rowIndex, colIndex)].getCell(getCellIndexInBox(rowIndex, colIndex)).removePossibleValue(value);
-        notifyDisplayObservers();
     }
 
     private void removePossibleValueFromPeers(int row, int col, int value) {
@@ -150,14 +152,25 @@ public class Sudoku {
         }
     }
 
-    public boolean isSolved() {
-        for (int row = 0; row < SIZE; row++) {
-            for (int col = 0; col < SIZE; col++) {
-                if (getValue(row, col) == 0) {
-                    return false;
-                }
+    private void notifyObservers() {
+        for (SudokuObserver observer : observers) {
+            observer.updateSudoku(this);
+        }
+    }
+
+    private void notifyDisplayObservers() {
+        for (SudokuObserver observer : observers) {
+            if (observer instanceof DisplayObserver) {
+                observer.updateSudoku(this);
             }
         }
-        return true;
+    }
+
+    private int getBoxIndex(int rowIndex, int colIndex) {
+        return (rowIndex / 3) * 3 + (colIndex / 3);
+    }
+
+    private int getCellIndexInBox(int rowIndex, int colIndex) {
+        return (rowIndex % 3) * 3 + (colIndex % 3);
     }
 }

@@ -22,77 +22,76 @@ public class DR2 implements DeductionRule {
     public boolean run(Sudoku sudoku) {
         boolean wasApplied = false;
 
-        // Process rows, columns, and boxes
         for (int i = 0; i < 9; i++) {
             wasApplied |= processRow(sudoku, i);
             wasApplied |= processColumn(sudoku, i);
+            wasApplied |= processBox(sudoku, i);
         }
-        wasApplied |= processAllBoxes(sudoku);
-
         return wasApplied;
     }
 
     private boolean processRow(Sudoku sudoku, int row) {
-        return processLine(sudoku, row, -1);
-    }
-
-    private boolean processColumn(Sudoku sudoku, int col) {
-        return processLine(sudoku, -1, col);
-    }
-
-    private boolean processAllBoxes(Sudoku sudoku) {
         boolean wasApplied = false;
-        for (int boxIndex = 0; boxIndex < 9; boxIndex++) {
-            for (int value = 1; value <= 9; value++) {
-                wasApplied |= findAndPlaceHiddenSingleInBox(sudoku, boxIndex, value);
-            }
+        for (int value = 1; value <= 9; value++) {
+            wasApplied |= findAndPlaceHiddenSingleInRow(sudoku, row, value);
         }
         return wasApplied;
     }
 
-    private boolean processLine(Sudoku sudoku, int row, int col) {
+    private boolean processColumn(Sudoku sudoku, int col) {
         boolean wasApplied = false;
         for (int value = 1; value <= 9; value++) {
-            if (row != -1) {
-                wasApplied |= findAndPlaceHiddenSingleInRow(sudoku, row, value);
-            } else {
-                wasApplied |= findAndPlaceHiddenSingleInColumn(sudoku, col, value);
-            }
+            wasApplied |= findAndPlaceHiddenSingleInColumn(sudoku, col, value);
+        }
+        return wasApplied;
+    }
+
+    private boolean processBox(Sudoku sudoku, int box) {
+        boolean wasApplied = false;
+        for (int value = 1; value <= 9; value++) {
+            wasApplied |= findAndPlaceHiddenSingleInBox(sudoku, box, value);
         }
         return wasApplied;
     }
 
     private boolean findAndPlaceHiddenSingleInRow(Sudoku sudoku, int row, int value) {
-        return findAndPlaceHiddenSingleInLine(sudoku, row, -1, value);
-    }
-
-    private boolean findAndPlaceHiddenSingleInColumn(Sudoku sudoku, int col, int value) {
-        return findAndPlaceHiddenSingleInLine(sudoku, -1, col, value);
-    }
-
-    private boolean findAndPlaceHiddenSingleInLine(Sudoku sudoku, int row, int col, int value) {
         int count = 0;
         int targetIndex = -1;
 
-        for (int i = 0; i < 9; i++) {
-            if ((row != -1 && isValuePossibleInCell(sudoku, row, i, value)) ||
-                    (col != -1 && isValuePossibleInCell(sudoku, i, col, value))) {
+        for (int col = 0; col < 9; col++) {
+            if (isValuePossibleInCell(sudoku, row, col, value)) {
                 count++;
-                targetIndex = i;
+                targetIndex = col;
             }
         }
 
-        if (count == 1) {
-            if (row != -1 && sudoku.getValue(row, targetIndex) == 0) {
-                sudoku.setValue(row, targetIndex, value);
-                return true;
-            } else if (col != -1 && sudoku.getValue(targetIndex, col) == 0) {
-                sudoku.setValue(targetIndex, col, value);
-                return true;
-            }
+        if (count == 1 && sudoku.getValue(row, targetIndex) == 0) {
+            sudoku.setValue(row, targetIndex, value);
+            return true;
         }
+
         return false;
     }
+
+    private boolean findAndPlaceHiddenSingleInColumn(Sudoku sudoku, int col, int value) {
+        int count = 0;
+        int targetIndex = -1;
+
+        for (int row = 0; row < 9; row++) {
+            if (isValuePossibleInCell(sudoku, row, col, value)) {
+                count++;
+                targetIndex = row;
+            }
+        }
+
+        if (count == 1 && sudoku.getValue(targetIndex, col) == 0) {
+            sudoku.setValue(targetIndex, col, value);
+            return true;
+        }
+
+        return false;
+    }
+
 
     private boolean findAndPlaceHiddenSingleInBox(Sudoku sudoku, int boxIndex, int value) {
         int count = 0;

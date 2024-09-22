@@ -23,7 +23,6 @@ public class SudokuFactory {
         return SudokuFactory.InstanceHolder.instance;
     }
 
-
     public Sudoku createSudoku(SudokuType sudokuType) throws IOException {
         String filePath = sudokuFileLoader.getFilePathForDifficulty(sudokuType);
         return sudokuFileLoader.readSudokuFromFile(filePath);

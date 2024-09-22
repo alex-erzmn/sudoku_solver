@@ -22,6 +22,9 @@ public class DeductionRuleFactory {
         return InstanceHolder.instance;
     }
 
+    /* Create a deduction rule based on the rule name. Currently not used but in the future it can be used to create
+     * deduction rules based on user input. For example to only use specific rules to solve a sudoku.
+     */
     public DeductionRule createDeductionRule(DeductionRuleType ruleName) {
         return switch (ruleName) {
             case NAKED_SINGLE -> new DR1();

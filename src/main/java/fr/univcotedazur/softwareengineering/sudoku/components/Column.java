@@ -1,7 +1,5 @@
 package fr.univcotedazur.softwareengineering.sudoku.components;
 
-import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
-
 import java.util.List;
 
 public class Column implements RowColumnBox {

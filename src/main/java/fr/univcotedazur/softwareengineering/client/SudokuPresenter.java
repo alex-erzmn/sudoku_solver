@@ -233,6 +233,12 @@ public class SudokuPresenter extends Application implements DisplayObserver {
             updateRuleList();
             if (controller.getSudoku().isSolved()) {
                 sceneManager.showInfo("Sudoku solved!");
+                solveButton.setDisable(true);
+                for (int row = 0; row < SIZE; row++) {
+                    for (int col = 0; col < SIZE; col++) {
+                        cells[row][col].setDisable(true);
+                    }
+                }
             }
         } else {
             sceneManager.showWarning("The Sudoku cannot be solved by the Deduction Rules. Please fill any cell.");

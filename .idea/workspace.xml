@@ -4,34 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Finalize Client module.">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bf398977cf328fb8222328b51560ca79f7e3e52" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Remove unused statement.">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d29dd7520437931aa39013303a71f9984ef9160" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d29dd7520437931aa39013303a71f9984ef9160" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/CheckObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/CheckObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/DisplayObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/DisplayObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/Sudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/components/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/components/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/components/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/components/Column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Box.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Column.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +220,7 @@
       <workItem from="1726826147262" duration="3857000" />
       <workItem from="1726905463329" duration="3984000" />
       <workItem from="1726915698645" duration="1096000" />
-      <workItem from="1726991514458" duration="6123000" />
+      <workItem from="1726991514458" duration="7200000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -366,7 +350,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726916791552</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Finalize DeductionRules and Sudoku module.">
+      <option name="closed" value="true" />
+      <created>1726998532642</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726998532642</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Remove unused statement.">
+      <option name="closed" value="true" />
+      <created>1726998590388</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726998590388</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +389,9 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update cellBlinking to 1sec." />
     <MESSAGE value="Finalize Client module." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize Client module." />
+    <MESSAGE value="Finalize DeductionRules and Sudoku module." />
+    <MESSAGE value="Remove unused statement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused statement." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Remove unused statement.">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d29dd7520437931aa39013303a71f9984ef9160" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d29dd7520437931aa39013303a71f9984ef9160" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e343b17b5250599503f41fa52a421891ce0988d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Disable cells after solving a sudoku.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/Sudoku.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/components/Column.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,57 +40,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.SudokuGUI.executor": "Run",
-    "Application.SudokuPresenter.executor": "Run",
-    "Application.SudokuReader.executor": "Run",
-    "Application.SudokuWriter.executor": "Run",
-    "JUnit.DR2Test.executor": "Run",
-    "JUnit.DR3Test.executor": "Run",
-    "JUnit.DR3UnitTest.executor": "Run",
-    "JUnit.DR3Unittest.executor": "Run",
-    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns.executor": "Run",
-    "JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldReturnTrue.executor": "Run",
-    "JUnit.SudokuCheckerTest.executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage.executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1).executor": "Run",
-    "JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage.executor": "Run",
-    "JUnit.SudokuControllerTest.executor": "Run",
-    "JUnit.SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.readSudokuFromFileTest.executor": "Coverage",
-    "JUnit.SudokuFileLoaderTest.readSudokuFromFileTest_Successful.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.testGetFilePathForDifficulty.executor": "Run",
-    "JUnit.SudokuFileLoaderTest.testReadFromCacheOnlyOnce.executor": "Run",
-    "JUnit.SudokuTest.addPossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.executor": "Coverage",
-    "JUnit.SudokuTest.getPossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.getValueTest.executor": "Run",
-    "JUnit.SudokuTest.initializePossibleValuesTest.executor": "Run",
-    "JUnit.SudokuTest.isSolvedTest.executor": "Run",
-    "JUnit.SudokuTest.removePossibleValueTest.executor": "Run",
-    "JUnit.SudokuTest.testSetValue.executor": "Run",
-    "JUnit.java in SudokuSolver.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alles/IdeaProjects/sudoku_solver",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuPresenter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SudokuWriter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR2Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3UnitTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldRemovePossibleValuesInOtherColumns.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DR3Unittest.testRun_WithBoxLineReductionApplied_ShouldReturnTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_InvalidSudoku_ShouldDisableCellsAndShowMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuCheckerTest.updateSudoku_ValidSudoku_ShouldNotDisableCellsOrShowMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuControllerTest.setCell_ValidValue_ShouldSetCellValue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.readSudokuFromFileTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.readSudokuFromFileTest_Successful.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.testGetFilePathForDifficulty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuFileLoaderTest.testReadFromCacheOnlyOnce.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.addPossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.SudokuTest.getPossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.getValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.initializePossibleValuesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.isSolvedTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.removePossibleValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SudokuTest.testSetValue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in SudokuSolver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alles/IdeaProjects/sudoku_solver&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alles\IdeaProjects\sudoku_solver\src\main\resources\testdata" />
@@ -220,7 +210,9 @@
       <workItem from="1726826147262" duration="3857000" />
       <workItem from="1726905463329" duration="3984000" />
       <workItem from="1726915698645" duration="1096000" />
-      <workItem from="1726991514458" duration="7200000" />
+      <workItem from="1726991514458" duration="7887000" />
+      <workItem from="1727083931278" duration="1113000" />
+      <workItem from="1727282206818" duration="6792000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -366,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726998590388</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Disable cells after solving a sudoku.">
+      <option name="closed" value="true" />
+      <created>1726999470261</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726999470261</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +391,8 @@
     <MESSAGE value="Finalize Client module." />
     <MESSAGE value="Finalize DeductionRules and Sudoku module." />
     <MESSAGE value="Remove unused statement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused statement." />
+    <MESSAGE value="Disable cells after solving a sudoku." />
+    <option name="LAST_COMMIT_MESSAGE" value="Disable cells after solving a sudoku." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

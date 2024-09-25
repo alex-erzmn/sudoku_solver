@@ -21,13 +21,11 @@ public class DR1 implements DeductionRule {
     public boolean run(Sudoku sudoku) {
         boolean wasApplied = false;
 
-        // Track cells to be updated
         Set<CellPosition> cellsToUpdate = new HashSet<>();
 
-        // Find cells with exactly one possible value
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
-                if (sudoku.getValue(row, col) == 0) { // Only consider empty cells
+                if (sudoku.getValue(row, col) == 0) {
                     Set<Integer> possibleValues = sudoku.getPossibleValues(row, col);
                     if (possibleValues.size() == 1) {
                         int value = possibleValues.iterator().next();
@@ -37,7 +35,6 @@ public class DR1 implements DeductionRule {
             }
         }
 
-        // Apply updates to the cells that were identified
         for (CellPosition cellPosition : cellsToUpdate) {
             sudoku.setValue(cellPosition.row, cellPosition.col, cellPosition.value);
             wasApplied = true;

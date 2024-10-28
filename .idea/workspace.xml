@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Remove unnecessary comments in DR1">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11009d080844deee2110ba89bf703fb0f21ab1e5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1274165068729709b8ec227694f94c239bf3cce1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/253125349a9abe4e651c0102e88f7f712f28ed76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6e6cc5ab79cc6ae14722657935ed66f0e9a17c7" afterDir="false" />
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Final check and corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/deductionrules/DR1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$InstanceHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$InstanceHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +235,7 @@
       <workItem from="1728679304548" duration="13000" />
       <workItem from="1729093077334" duration="417000" />
       <workItem from="1729157314418" duration="142000" />
-      <workItem from="1730121740066" duration="728000" />
+      <workItem from="1730121740066" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -396,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727293510274</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Final check and corrections">
+      <option name="closed" value="true" />
+      <created>1730122896973</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1730122896973</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +432,8 @@
     <MESSAGE value="Remove unused statement." />
     <MESSAGE value="Disable cells after solving a sudoku." />
     <MESSAGE value="Remove unnecessary comments in DR1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary comments in DR1" />
+    <MESSAGE value="Final check and corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final check and corrections" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

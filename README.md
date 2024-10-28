@@ -7,8 +7,8 @@ The user can create a sudoku and the program will solve it step by step.
 
 ## How to run the program
 1. Clone the repository
-2. Open the project in your favorite IDE
-3. Run the Main class or the SudokuSolver-1.0-SNAPSHOT.jar
+2. Open the project in your favorite IDE or in the folder where you cloned the repository
+3. Run the Main class or the SudokuSolver-1.0-SNAPSHOT.jar (target folder)
 4. The GUI will open
 5. Click on the "Start" button
 6. By clicking on the "Create Sudoku" button, you can create a new Sudoku considering the chosen difficulty

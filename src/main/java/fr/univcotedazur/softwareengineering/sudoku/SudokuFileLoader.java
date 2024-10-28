@@ -8,6 +8,12 @@ import java.util.*;
 
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.SIZE;
 
+/**
+ * Class to load Sudokus from a file. This class is responsible for reading Sudokus from a file. It caches the loaded
+ * Sudokus to avoid reading the file multiple times. It also provides a random Sudoku from the loaded Sudokus.
+ * @since 12/09/2024
+ * @implNote Singleton pattern
+ */
 public class SudokuFileLoader {
 
     private final Random random = new Random();

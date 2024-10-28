@@ -21,6 +21,7 @@ public class DR1 implements DeductionRule {
     public boolean run(Sudoku sudoku) {
         boolean wasApplied = false;
 
+        // Set to store the cells that need to be updated to avoid cascading updates and therefore increase transparency
         Set<CellPosition> cellsToUpdate = new HashSet<>();
 
         for (int row = 0; row < 9; row++) {

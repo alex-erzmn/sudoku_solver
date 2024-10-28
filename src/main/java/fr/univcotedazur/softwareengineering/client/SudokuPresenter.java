@@ -82,31 +82,6 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         startCellBlinking();
     }
 
-    @Override
-    public void updateSudoku(Sudoku sudoku) {
-        if (sudoku == null) return;
-
-        int[][] board = getSudokuGrid(sudoku);
-        for (int row = 0; row < SIZE; row++) {
-            for (int col = 0; col < SIZE; col++) {
-                int value = board[row][col];
-                if (value == 0) {
-                    Set<Integer> possibleValuesSet = sudoku.getPossibleValues(row, col);
-                    List<Integer> possibleValues = new ArrayList<>(possibleValuesSet);
-                    cells[row][col].setGraphic(createPossibleValuesGrid(possibleValues));
-                    cells[row][col].setText("");
-                    cells[row][col].setStyle("-fx-background-color: #FFFFFF;");
-                } else {
-                    cells[row][col].setOnAction(null);
-                    cells[row][col].setText(String.valueOf(value));
-                    cells[row][col].setGraphic(null);
-                    cells[row][col].setStyle("-fx-background-color: #C8C8C8;");
-                    cells[row][col].setTextFill(Color.BLACK);
-                }
-            }
-        }
-    }
-
     private Scene createStartScene() {
         VBox startLayout = new VBox(20);
         startLayout.setAlignment(Pos.CENTER);
@@ -225,6 +200,31 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         }
     }
 
+    @Override
+    public void updateSudoku(Sudoku sudoku) {
+        if (sudoku == null) return;
+
+        int[][] board = getSudokuGrid(sudoku);
+        for (int row = 0; row < SIZE; row++) {
+            for (int col = 0; col < SIZE; col++) {
+                int value = board[row][col];
+                if (value == 0) {
+                    Set<Integer> possibleValuesSet = sudoku.getPossibleValues(row, col);
+                    List<Integer> possibleValues = new ArrayList<>(possibleValuesSet);
+                    cells[row][col].setGraphic(createPossibleValuesGrid(possibleValues));
+                    cells[row][col].setText("");
+                    cells[row][col].setStyle("-fx-background-color: #FFFFFF;");
+                } else {
+                    cells[row][col].setOnAction(null);
+                    cells[row][col].setText(String.valueOf(value));
+                    cells[row][col].setGraphic(null);
+                    cells[row][col].setStyle("-fx-background-color: #C8C8C8;");
+                    cells[row][col].setTextFill(Color.BLACK);
+                }
+            }
+        }
+    }
+
     private void solveStep() {
         String ruleName = controller.solve();
         if (ruleName != null) {
@@ -296,6 +296,9 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         return grid;
     }
 
+    /**
+     * Start the cell blinking animation. Just for fun!
+     */
     private void startCellBlinking() {
         blinkTimeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             int row = (int) (Math.random() * SIZE);

@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Final check and corrections">
+    <list default="true" id="b1fcdf66-6ccb-40ab-8cbd-23a832c8c981" name="Changes" comment="Final .jar creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SudokuSolver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/client/SudokuPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DR1$CellPosition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$InstanceHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader$InstanceHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.deductionrules.DR1Test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-fr.univcotedazur.softwareengineering.sudoku.SudokuTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.deductionrules.DR1Test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/fr.univcotedazur.softwareengineering.sudoku.SudokuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/client/SudokuPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/univcotedazur/softwareengineering/deductionrules/DeductionRuleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/fr/univcotedazur/softwareengineering/sudoku/SudokuFileLoaderTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +232,9 @@
       <workItem from="1728679304548" duration="13000" />
       <workItem from="1729093077334" duration="417000" />
       <workItem from="1729157314418" duration="142000" />
-      <workItem from="1730121740066" duration="1720000" />
+      <workItem from="1730121740066" duration="4218000" />
+      <workItem from="1730723108995" duration="694000" />
+      <workItem from="1730746960432" duration="1391000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Setup">
       <option name="closed" value="true" />
@@ -405,7 +404,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730122896973</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Final .jar creation">
+      <option name="closed" value="true" />
+      <created>1730123503683</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1730123503683</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Final .jar creation">
+      <option name="closed" value="true" />
+      <created>1730123510788</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1730123510788</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +448,8 @@
     <MESSAGE value="Disable cells after solving a sudoku." />
     <MESSAGE value="Remove unnecessary comments in DR1" />
     <MESSAGE value="Final check and corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final check and corrections" />
+    <MESSAGE value="Final .jar creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final .jar creation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

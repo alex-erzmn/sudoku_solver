@@ -3,10 +3,12 @@ package fr.univcotedazur.softwareengineering.client;
 import fr.univcotedazur.softwareengineering.deductionrules.DeductionRule;
 import fr.univcotedazur.softwareengineering.deductionrules.DeductionRuleFactory;
 import fr.univcotedazur.softwareengineering.sudoku.SudokuFactory;
+import fr.univcotedazur.softwareengineering.sudoku.SudokuFileLoader;
 import fr.univcotedazur.softwareengineering.sudoku.SudokuType;
 import fr.univcotedazur.softwareengineering.sudoku.Sudoku;
 import lombok.Getter;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.List;
  */
 public class SudokuController {
     private final SudokuFactory sudokuFactory;
+    private final SudokuFileLoader sudokuFileLoader;
     private final DeductionRuleFactory ruleFactory;
     private List<DeductionRule> deductionRules;
     @Getter
@@ -30,12 +33,19 @@ public class SudokuController {
 
     public SudokuController() {
         sudokuFactory = SudokuFactory.getInstance();
+        sudokuFileLoader = SudokuFileLoader.getInstance();
         ruleFactory = DeductionRuleFactory.getInstance();
         currentRuleName = "None";
     }
 
     public Sudoku createSudoku(SudokuType type) throws IOException {
         sudoku = sudokuFactory.createSudoku(type);
+        sudoku.initializePossibleValues();
+        return sudoku;
+    }
+
+    public Sudoku loadSudokuFromFile(File file) throws IOException {
+        sudoku = sudokuFileLoader.readSudokuFromFile(file.getAbsolutePath());
         sudoku.initializePossibleValues();
         return sudoku;
     }

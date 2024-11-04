@@ -20,12 +20,14 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 import lombok.Getter;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +59,9 @@ public class SudokuPresenter extends Application implements DisplayObserver {
     @FXML
     @Getter
     private Button createSudokuButton;
+    @FXML
+    @Getter
+    private Button uploadSudokuButton;
     @FXML
     @Getter
     private Button solveButton;
@@ -135,6 +140,10 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         createSudokuButton.setStyle(BUTTON_STYLE);
         createSudokuButton.setOnAction(event -> createSudoku());
 
+        uploadSudokuButton = new Button("Upload Sudoku");
+        uploadSudokuButton.setStyle(BUTTON_STYLE);
+        uploadSudokuButton.setOnAction(event -> uploadSudokuFromFile());
+
         solveButton = new Button("Solve");
         solveButton.setStyle(BUTTON_STYLE);
         solveButton.setOnAction(event -> solveStep());
@@ -148,7 +157,7 @@ public class SudokuPresenter extends Application implements DisplayObserver {
         ruleList = new ListView<>(ruleListModel);
         ruleList.setPrefHeight(200);
 
-        controlPanel.getChildren().addAll(createSudokuButton, difficultyComboBox, solveButton, ruleList);
+        controlPanel.getChildren().addAll(createSudokuButton, uploadSudokuButton, difficultyComboBox, solveButton, ruleList);
         mainLayout.setRight(controlPanel);
 
         currentRuleName = "None";
@@ -197,6 +206,44 @@ public class SudokuPresenter extends Application implements DisplayObserver {
             solveButton.setDisable(false);
         } catch (IOException ex) {
             sceneManager.showError("Error creating Sudoku: " + ex.getMessage());
+        }
+    }
+
+    private void uploadSudokuFromFile() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Sudoku File");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+
+        File file = fileChooser.showOpenDialog(null);
+        if (file != null) {
+            try {
+                if (blinkTimeline != null) {
+                    blinkTimeline.stop();
+                }
+
+                Sudoku sudoku = controller.loadSudokuFromFile(file);
+                SudokuChecker sudokuChecker = new SudokuChecker(this);
+                sudoku.addObserver(sudokuChecker);
+                sudoku.addObserver(this);
+                updateSudoku(sudoku);
+                currentRuleName = "None";
+                ruleLabel.setText(RULE_HEADER + currentRuleName);
+                updateRuleList();
+
+                solveButton.setDisable(false);
+                for (int row = 0; row < SIZE; row++) {
+                    for (int col = 0; col < SIZE; col++) {
+                        if(sudoku.getValue(row, col) == 0) {
+                            int finalRow = row;
+                            int finalCol = col;
+                            cells[row][col].setOnAction(event -> cellClicked(finalRow, finalCol));
+                        }
+                        cells[row][col].setDisable(false);
+                    }
+                }
+            } catch (IOException ex) {
+                sceneManager.showError("Error uploading Sudoku: " + ex.getMessage());
+            }
         }
     }
 

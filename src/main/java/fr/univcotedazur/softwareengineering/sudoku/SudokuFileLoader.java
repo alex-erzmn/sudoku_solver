@@ -1,9 +1,6 @@
 package fr.univcotedazur.softwareengineering.sudoku;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 import static fr.univcotedazur.softwareengineering.sudoku.Sudoku.SIZE;
@@ -70,9 +67,16 @@ public class SudokuFileLoader {
 
     private List<Sudoku> loadSudokusFromFile(String fileName) throws IOException {
         List<Sudoku> sudokus = new ArrayList<>();
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(fileName);
+        InputStream inputStream;
+
+        inputStream = getClass().getClassLoader().getResourceAsStream(fileName);
+
         if (inputStream == null) {
-            throw new IOException("File not found in resources: " + fileName);
+            try {
+                inputStream = new FileInputStream(fileName);
+            } catch (IOException e) {
+                throw new IOException("File not found: " + fileName);
+            }
         }
 
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
